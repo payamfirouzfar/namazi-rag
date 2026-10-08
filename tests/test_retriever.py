@@ -61,3 +61,14 @@ def test_bm25_ignores_chunks_with_no_matching_word(index):
 def test_hit_has_dense_score(index):
     hit = search(index, "warfarin INR")[0]
     assert -1.0 <= hit.dense_score <= 1.0
+
+
+def test_search_quality_does_not_drop_on_the_sample_questions(index):
+    # a safety net: if chunking, search or merging gets worse, the hit rate falls and CI turns red
+    from scripts.tune import evaluate, load_eval
+
+    items = load_eval("data/eval/eval_sample_questions.jsonl")
+    result = evaluate(HybridRetriever(index, HashEmbedder(), RetrievalParams()), items, 5)
+    assert result["n"] >= 10
+    assert result["hit_rate"] >= 0.9
+    assert result["mrr"] >= 0.8
