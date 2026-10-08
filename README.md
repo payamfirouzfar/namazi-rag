@@ -234,7 +234,7 @@ The csv in the repo was rebuilt from the text of the original file (the two foru
 | answered | 287 (68%) | 317 (76%) |
 | said "I don't know" | 133 (32%) | 102 (24%) |
 | answers citing the expected page | 284 of 287 (99%) | 310 of 317 (98%) |
-| answers with a number that is in no source | 11 (4%) | 26 (8%) |
+| answers with a number that is in no source | 0 | 1 (0.3%) |
 | answers the LLM judge doubts | 27 (9%) | **74 (23%)** |
 | answers with broken letters | 0 | **13** |
 | median time per question (three runs shared the GPU) | 4.4 s | 6.5 s |
@@ -246,6 +246,7 @@ The web pages explain a disease well but say little about follow-up (95% "I don'
 becomes "I don't know". I also added an emergency line for urgent words (chest pain, trouble breathing, suicide ...), a guard that shows "I don't know" instead of a Persian answer with Chinese, Japanese or Korean letters,
 Prometheus alerts (`docs/alerts.yml`) and a sheet for doctors (`python -m scripts.review_sample`, 100 answers, `docs/doctor_review.csv`).
 The judge is the same model as the answerer and reads Persian worse than English, so the Persian doubts are a warning, not an exact number.
+My first count of numbers in no source was 11 and 26, but it counted the 1. 2. 3. of numbered lists as facts. After fixing that (and a test for it) the counts are 0 and 1.
 
 ### Where the time goes
 
@@ -253,9 +254,11 @@ The judge is the same model as the answerer and reads Persian worse than English
 
 ![One answer, step by step](docs/time_steps.png)
 
-For an English question, writing the answer takes 62% of the time (about 2.8 s) and reading the sources 37% (about 1.6 s). The whole search (embedding, dense, BM25, merge) takes about 36 ms, under 1%.
-A Persian question also needs a translation call (1.1 s, 17%). **So the LLM is what to optimize**, in this order: a faster or smaller model or server (writing), fewer chunks in the prompt (reading, but the right passage is found less often:
-86% in the top 5, 72% in the top 3), a cheaper translation. The search is not worth touching. These steps add up to a little more than the 3.1 s and 4.9 s medians of the staff answer check; I don't know the exact reason.
+For an English question reading the sources takes 52% of the time (about 1.5 s) and writing the answer 47% (about 1.4 s). The whole search (embedding, dense, BM25, merge) takes about 28 ms, under 1%.
+A Persian question also needs a translation call (0.9 s, 23% of its 4.0 s). **So the LLM is what to optimize**: fewer or shorter chunks in the prompt (reading), a faster or smaller model or server (writing),
+and a cheaper translation. Cutting to 3 chunks would be faster but the right passage is found less often (86% in the top 5, 72% in the top 3). The search is not worth touching.
+The steps add up to 2.9 s (English) and 4.0 s (Persian), which matches the medians of the staff answer check (about 3 s and 4 s). An earlier timing run showed 2.8 s for writing the answer: the GPU was busy then, so I replaced it
+with this run, taken with the GPU idle.
 
 ### Speed and cost
 

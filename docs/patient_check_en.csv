@@ -1,4 +1,4 @@
-﻿question,answerable,answered,has_citation,evidence_in_sources,evidence_cited,made_up_numbers,bad_citation,judge_supported,seconds,prompt_tokens,completion_tokens,answer
+question,answerable,answered,has_citation,evidence_in_sources,evidence_cited,made_up_numbers,bad_citation,judge_supported,seconds,prompt_tokens,completion_tokens,answer
 What is Type 2 diabetes in simple terms?,True,True,True,True,True,0,False,True,18.3,1707,44,"Type 2 diabetes is a condition where your body doesn't use insulin properly, leading to high blood sugar levels. Over time, this can damage your body, especially your nerves and blood vessels [1][4]."
 What symptoms are commonly linked to Type 2 diabetes?,True,True,True,True,True,0,False,True,8.4,1692,64,"Symptoms of type 2 diabetes can be mild and may take several years to be noticed. They might include numbness or tingling in the feet or hands, and sores that do not heal [3]. Symptoms can develop slowly over several years and might be so mild that they are not noticed [5]."
 Can symptoms linked to Type 2 diabetes come and go or change over time?,True,False,False,True,False,0,False,,1.7,1598,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
@@ -39,7 +39,7 @@ What complications or related health problems should I ask a clinician about for
 - Regular blood glucose checks [5]"
 How often might a clinician recommend follow-up or monitoring for Type 2 diabetes?,True,False,False,True,False,0,False,,1.4,1720,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "Could my age, family history, pregnancy, or another health condition affect care for Type 2 diabetes?",True,True,True,True,True,0,False,True,18.7,1614,112,"Yes, your age, family history, pregnancy, or other health conditions can affect care for Type 2 diabetes. If you are over age 45, have a family history of diabetes, had diabetes in pregnancy, or have other conditions such as high blood pressure, heart disease, stroke, polycystic ovary syndrome (PCOS), or depression, you are at higher risk for type 2 diabetes [1]. Managing these conditions may be part of your diabetes care plan to prevent complications and manage blood glucose levels effectively [1][3]."
-What are useful questions to take to my next appointment about Type 2 diabetes?,True,True,True,True,True,4,False,True,33.3,1627,213,"Here are some useful questions you could ask at your next appointment regarding Type 2 diabetes:
+What are useful questions to take to my next appointment about Type 2 diabetes?,True,True,True,True,True,0,False,True,33.3,1627,213,"Here are some useful questions you could ask at your next appointment regarding Type 2 diabetes:
 
 1. How often should I check my blood glucose levels? [1]
 2. What are my target blood glucose levels? [1]
@@ -95,7 +95,7 @@ What information helps a clinician choose a treatment plan for Asthma?,True,True
 - **Allergy skin or blood tests** if there is a history of allergies, to identify specific allergens causing a reaction [2].
 
 Additionally, the treatment plan will consider strategies to avoid triggers and may include short-term relief medicines (quick-relief medicines) and control medicines taken daily to prevent symptoms [1]."
-What should I ask about the purpose of medicines used for Asthma?,True,True,True,True,True,3,False,True,10.8,1535,159,"When discussing the purpose of medicines used for asthma, you should ask about:
+What should I ask about the purpose of medicines used for Asthma?,True,True,True,True,True,0,False,True,10.8,1535,159,"When discussing the purpose of medicines used for asthma, you should ask about:
 
 1. Short-term relief medicines (quick-relief medicines) that help prevent or relieve symptoms during an asthma attack. These include inhalers that you carry with you at all times and other types of medicines that work quickly to open your airways [2].
 
@@ -210,7 +210,7 @@ What complications or related health problems should I ask a clinician about for
 - Arrhythmia, which is a problem with the rate or rhythm of your heartbeat [4]"
 How often might a clinician recommend follow-up or monitoring for Coronary artery disease?,True,False,False,True,False,0,False,,2.0,1749,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "Could my age, family history, pregnancy, or another health condition affect care for Coronary artery disease?",True,True,True,True,True,0,False,False,13.3,1727,143,"Your age, family history, and other health conditions can affect the care for coronary artery disease. For instance, if you have a family history of heart disease, especially in a parent or sibling who had it before age 50, you may be more likely to develop CAD [3]. Additionally, other health conditions such as high blood pressure, high cholesterol, or high blood glucose (diabetes) can increase your risk of CAD [3]. However, pregnancy is not specifically mentioned in the provided sources as a direct factor in the care for coronary artery disease. The treatment plan for CAD is based on which arteries are affected, how much blood flow is blocked, and what other health conditions you have [1]."
-What are useful questions to take to my next appointment about Coronary artery disease?,True,True,True,True,True,7,False,True,13.8,1722,151,"Here are some useful questions to ask your provider about coronary artery disease (CAD):
+What are useful questions to take to my next appointment about Coronary artery disease?,True,True,True,True,True,0,False,True,13.8,1722,151,"Here are some useful questions to ask your provider about coronary artery disease (CAD):
 
 1. What is my risk of developing CAD based on my health history and lifestyle?
 2. What specific tests will you use to diagnose CAD?
@@ -424,7 +424,7 @@ What kinds of physical activity should I ask about if I have Depression?,True,Tr
 What complications or related health problems should I ask a clinician about for Depression?,True,True,True,True,True,0,False,True,8.0,1794,111,"Depression can lead to or be associated with several health problems, including cardiovascular disease, cancer, diabetes, and respiratory diseases [1]. Additionally, depression can result from or lead to problems at school or work, and it can affect relationships with family, friends, and the community [3]. It is also important to note that depression can increase the risk of suicide, which is the third leading cause of death in 15–29-year-olds [3]. Therefore, you should ask your clinician about these potential complications and related health problems."
 How often might a clinician recommend follow-up or monitoring for Depression?,True,False,False,True,False,0,False,,1.9,1884,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "Could my age, family history, pregnancy, or another health condition affect care for Depression?",True,True,True,True,True,0,False,True,5.3,1867,139,"Yes, your age, family history, pregnancy, or another health condition can affect care for depression. For instance, antidepressant medicines should not be used for treating depression in children and are not the first line of treatment in adolescents, among whom they should be used with extra caution [4]. Additionally, women who are pregnant or have just given birth are at a higher risk of experiencing depression, with more than 10% of pregnant women and women who have just given birth experiencing depression [2]. People with other health conditions may also find themselves experiencing depression due to the difficulties associated with managing their condition [1]. Therefore, these factors are important considerations in the management and treatment of depression."
-What are useful questions to take to my next appointment about Depression?,True,True,True,True,True,1,False,True,10.4,1883,124,"When preparing for your next appointment regarding depression, consider asking the following questions:
+What are useful questions to take to my next appointment about Depression?,True,True,True,True,True,0,False,True,10.4,1883,124,"When preparing for your next appointment regarding depression, consider asking the following questions:
 
 1. What type of psychological treatment do you recommend for my condition?
 2. Are there any self-help resources, such as manuals, websites, or apps, that you would recommend?
@@ -526,7 +526,7 @@ What kinds of physical activity should I ask about if I have GERD (acid reflux d
 What complications or related health problems should I ask a clinician about for GERD (acid reflux disease)?,True,True,True,True,True,0,False,True,2.4,1818,59,"If GERD is not treated, it can cause complications such as inflammation of the esophagus, scarring, or changes in the tissue lining (Barrett's esophagus). It can also worsen asthma or cause chronic (long-term) cough or hoarseness [2]."
 How often might a clinician recommend follow-up or monitoring for GERD (acid reflux disease)?,True,False,False,True,False,0,False,,1.0,1801,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "Could my age, family history, pregnancy, or another health condition affect care for GERD (acid reflux disease)?",True,False,False,True,False,0,False,,0.7,1737,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
-What are useful questions to take to my next appointment about GERD (acid reflux disease)?,True,True,True,True,True,7,False,False,15.1,1539,212,"Based on the provided sources, here are some useful questions to ask your healthcare provider about GERD:
+What are useful questions to take to my next appointment about GERD (acid reflux disease)?,True,True,True,True,True,0,False,False,15.1,1539,212,"Based on the provided sources, here are some useful questions to ask your healthcare provider about GERD:
 
 1. What lifestyle changes can I make to manage my GERD symptoms? [1][3]
 2. Are there specific foods or drinks I should avoid to prevent GERD flare-ups? [1][3]
@@ -779,7 +779,7 @@ Are there known triggers or situations that may make High cholesterol symptoms w
 How do clinicians usually decide whether someone has High cholesterol?,True,True,True,True,True,0,False,True,2.1,1816,58,"Clinicians usually diagnose high cholesterol through a blood test that measures cholesterol levels [1][2]. There are no signs or symptoms of high cholesterol, so testing is necessary for diagnosis [1][2]. The frequency of testing depends on age, risk factors, and family history [2]."
 Which tests or examinations may be used to assess High cholesterol?,True,True,True,True,True,0,False,True,0.8,1817,14,A blood test can measure your cholesterol levels [1][2].
 How can I ask my clinician to explain an unclear test result related to High cholesterol?,True,False,False,True,False,0,False,,1.4,1823,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
-What treatment options might a clinician discuss for High cholesterol?,True,True,True,True,True,1,False,True,9.8,1817,152,"A clinician might discuss several treatment options for high cholesterol, including:
+What treatment options might a clinician discuss for High cholesterol?,True,True,True,True,True,0,False,True,9.8,1817,152,"A clinician might discuss several treatment options for high cholesterol, including:
 
 1. **Lifestyle Changes**: Implementing a heart-healthy eating plan, managing weight, and engaging in regular physical activity [1][5].
 2. **Medications**: If lifestyle changes are not sufficient, medications such as statins and other cholesterol-lowering drugs may be prescribed [1][5].
@@ -791,7 +791,7 @@ What should I ask about the purpose of medicines used for High cholesterol?,True
 What side effects or medicine interactions should I ask about if I am treated for High cholesterol?,True,False,False,True,False,0,False,,1.5,1611,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "If I miss a dose of a medicine related to High cholesterol, who should I contact for advice?",True,False,False,True,False,0,False,,1.3,1427,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "How could High cholesterol affect my sleep, work, study, or everyday activities?",True,False,False,True,False,0,False,,2.1,1821,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
-"What questions about food, drink, or lifestyle should I discuss with my clinician about High cholesterol?",True,True,True,True,True,3,False,True,9.0,1825,187,"You should discuss the following with your clinician regarding high cholesterol:
+"What questions about food, drink, or lifestyle should I discuss with my clinician about High cholesterol?",True,True,True,True,True,0,False,True,9.0,1825,187,"You should discuss the following with your clinician regarding high cholesterol:
 
 1. Unhealthy eating habits, particularly the consumption of saturated fats found in red meats, full-fat dairy products, chocolate, some baked goods, and many deep-fried and processed foods [2].
 2. Lack of physical activity and the need for regular exercise to increase HDL (good) cholesterol [2].
@@ -811,7 +811,7 @@ How often might a clinician recommend follow-up or monitoring for High cholester
 "Could my age, family history, pregnancy, or another health condition affect care for High cholesterol?",True,True,True,True,True,0,False,False,8.5,1824,104,"Age, family history, and other health conditions can affect the care for high cholesterol. As you get older, your cholesterol levels tend to rise [2]. High blood cholesterol can also run in families [2]. Other health conditions such as diabetes, chronic kidney disease, HIV, and lupus can raise your risk of high cholesterol [2]. 
 
 Regarding pregnancy, there is no direct mention in the provided sources about how pregnancy specifically affects care for high cholesterol. Therefore, for pregnancy, the answer is NO_ANSWER."
-What are useful questions to take to my next appointment about High cholesterol?,True,True,True,True,True,5,False,True,11.1,1819,235,"Here are some useful questions to ask at your next appointment regarding high cholesterol:
+What are useful questions to take to my next appointment about High cholesterol?,True,True,True,True,True,0,False,True,11.1,1819,235,"Here are some useful questions to ask at your next appointment regarding high cholesterol:
 
 1. What are my current cholesterol levels, and how do they compare to the recommended thresholds? [1]
 2. Based on my age, risk factors, and family history, how often should I be getting my cholesterol tested? [1]
@@ -876,7 +876,7 @@ NO_ANSWER"
 - **Other Health Conditions**: An underactive thyroid can be caused by other thyroid conditions, such as thyroiditis, surgery or radiotherapy around your neck, or treatment for an overactive thyroid [1].
 
 These factors can influence the management and treatment of your condition."
-What are useful questions to take to my next appointment about Underactive thyroid (hypothyroidism)?,True,True,True,True,True,6,False,True,18.0,1404,207,"When discussing underactive thyroid (hypothyroidism) with your GP, consider asking the following questions:
+What are useful questions to take to my next appointment about Underactive thyroid (hypothyroidism)?,True,True,True,True,True,0,False,True,18.0,1404,207,"When discussing underactive thyroid (hypothyroidism) with your GP, consider asking the following questions:
 
 1. What are the results of my recent thyroid function tests, specifically TSH and T4 levels? [1][2]
 2. Based on my symptoms and test results, do you think my current dose of levothyroxine is appropriate? [2]
@@ -952,7 +952,7 @@ Additionally, you should seek urgent advice if you experience:
 These symptoms may indicate more serious conditions that require immediate attention. [2][4]"
 How often might a clinician recommend follow-up or monitoring for Back pain?,True,False,False,True,False,0,False,,1.7,1594,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "Could my age, family history, pregnancy, or another health condition affect care for Back pain?",True,True,False,True,False,0,False,False,7.2,1559,46,"The provided sources do not explicitly mention how age, family history, pregnancy, or other health conditions specifically affect care for back pain. Therefore, based on the given information, I cannot provide a detailed answer [NO_ANSWER]."
-What are useful questions to take to my next appointment about Back pain?,True,True,True,True,True,5,False,True,10.6,1593,182,"When discussing back pain with your GP, consider asking the following questions based on the provided sources:
+What are useful questions to take to my next appointment about Back pain?,True,True,True,True,True,0,False,True,10.6,1593,182,"When discussing back pain with your GP, consider asking the following questions based on the provided sources:
 
 1. Could my back pain be due to a specific medical condition like a slipped disc or ankylosing spondylitis? [1]
 2. Are there specific exercises or stretches that could help alleviate my back pain? [2][3]
@@ -1050,7 +1050,7 @@ What kinds of physical activity should I ask about if I have Osteoporosis?,True,
 What complications or related health problems should I ask a clinician about for Osteoporosis?,True,True,True,True,True,0,False,True,3.4,1678,76,"Osteoporosis can lead to fractures, particularly in the spine, hip, and wrist. These fractures can result in chronic pain, loss of height, deformity (such as a stooped posture), and reduced mobility [1][4]. Additionally, fractures due to osteoporosis can increase the risk of other health complications and may affect overall quality of life [1]."
 How often might a clinician recommend follow-up or monitoring for Osteoporosis?,True,False,False,True,False,0,False,,1.5,1567,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 "Could my age, family history, pregnancy, or another health condition affect care for Osteoporosis?",True,True,True,True,True,0,False,True,9.3,1698,135,"Yes, several factors can affect care for osteoporosis, including your age, family history, and other health conditions. Age is a significant risk factor, with the risk increasing as you get older [2][4]. Family history also plays a role; if one of your parents has osteoporosis or has broken a hip, your risk may be higher [2]. Pregnancy itself is not directly mentioned as a risk factor in the provided sources, but other health conditions such as anorexia nervosa can contribute to bone loss [2]. Additionally, the long-term use of certain medications, like proton pump inhibitors, can increase the risk of osteoporosis [2]."
-What are useful questions to take to my next appointment about Osteoporosis?,True,True,True,True,True,7,False,True,6.1,1572,194,"For your next appointment regarding osteoporosis, consider asking the following questions based on the provided sources:
+What are useful questions to take to my next appointment about Osteoporosis?,True,True,True,True,True,0,False,True,6.1,1572,194,"For your next appointment regarding osteoporosis, consider asking the following questions based on the provided sources:
 
 1. Could you assess my risk factors for osteoporosis and determine if I need a bone density scan? [1]
 2. What lifestyle changes can I make to help prevent bone loss and fractures? [4]

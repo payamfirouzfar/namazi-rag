@@ -1,4 +1,4 @@
-﻿question,answerable,answered,has_citation,evidence_in_sources,evidence_cited,made_up_numbers,bad_citation,judge_supported,seconds,prompt_tokens,completion_tokens,answer
+question,answerable,answered,has_citation,evidence_in_sources,evidence_cited,made_up_numbers,bad_citation,judge_supported,seconds,prompt_tokens,completion_tokens,answer
 What is Seasonal influenza (flu) in simple terms?,False,False,False,False,False,0,False,,12.7,1603,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 آنفلوانزای فصلی به زبان ساده چیست؟,False,False,False,False,False,0,False,,3.6,1667,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
 What symptoms are commonly linked to Seasonal influenza (flu)?,False,False,False,False,False,0,False,,1.4,1601,4,I could not find the answer to this question in the hospital's reference books. پاسخ این پرسش در منابع موجود پیدا نشد.
