@@ -8,10 +8,19 @@ says so instead of guessing.
 ## Status: what is real and what is not
 
 I built this for a hospital pilot. It has **not** been used in a hospital: no staff, no patients and no real logs exist, and
-I could not have shared them anyway. What is real: the code, the 103 tests, the evaluation on 20 public guidelines (results below),
+I could not have shared them anyway. What is real: the code, the 105 tests, the evaluation on 20 public guidelines (results below),
 the load tests, the monitoring and the deployment steps I ran myself on a GPU server. What is not: any real-world usage.
 The load tests use made-up traffic (the 76 English eval questions, asked again and again). Answers are reference text from books,
 not medical advice.
+
+## At a glance
+
+- Answers questions from 20 public medical guidelines, in English and Persian, with book and page citations.
+- **English:** the right passage is in the top 5 for 86% of the questions, and the answer cites it for 79%. **Persian:** 82% reach the model (after a translation step) and 69% are cited.
+- It says "not found" for 32 of the 34 questions the books cannot answer. The 2 misses are both Persian, and they are made-up answers. More below.
+- **Speed:** search takes about 21 ms, a whole answer about 3 s on one A100.
+- **Many users:** the app alone took 10,000 users with no errors (about 20 questions per second). The real limit is the model: one GPU makes about 0.4 answers per second.
+- **Cost:** no token price with the local model. The same 10,000 questions on a paid API would cost roughly USD 6 to 47.
 
 ## How it works
 
@@ -25,17 +34,16 @@ not medical advice.
         answer + citations  <--  LLM (answers only from the chunks)  <-- prompt
 ```
 
-Ideas taken from the four reference projects: hybrid BM25 + vector search merged with
-Reciprocal Rank Fusion, sentence-aware chunks with overlap, a `NO_ANSWER` rule against
-hallucination, thumbs up/down feedback, conversation logging, hit rate / MRR evaluation, and
-tuning on a dev set kept apart from the test set.
+The main ideas: hybrid BM25 + vector search merged with Reciprocal Rank Fusion, sentence-aware chunks with overlap,
+a `NO_ANSWER` rule against made-up answers, thumbs up/down feedback, conversation logging, hit rate / MRR evaluation,
+and tuning on a dev set that is kept apart from the test set.
 
 ## Quick start (about 5 minutes, no downloads)
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
-python -m pytest                                   # 103 tests, a few seconds
+python -m pytest                                   # 105 tests, a few seconds
 
 # try it on the 4 tiny sample files with the offline test embedder
 export EMBEDDING_MODEL=hash
@@ -58,7 +66,7 @@ cp .env.example .env            # set LLM_*, API_KEYS, ENV=production
 # put licensed books in data/books/  (see docs/BOOKS.md)
 python -m scripts.ingest        # downloads the embedding model on first run
 python -m scripts.tune          # find good settings on your own questions (docs/TUNING.md)
-docker compose up -d --build    # or: gunicorn "app.main:app_factory()" -k uvicorn.workers.UvicornWorker
+docker compose up -d --build    # not tested, see the notes at the end. Or: gunicorn "app.main:app_factory()" -k uvicorn.workers.UvicornWorker
 ```
 
 Ingest inside Docker: `docker compose run --rm api python -m scripts.ingest`
@@ -154,7 +162,7 @@ Held-out test split (43 questions, 32 answerable): hit rate@5 0.594, MRR 0.329. 
 | Data safety | all SQL parameterized, SQLite in WAL mode |
 | Errors | no stack traces or internal addresses sent to clients |
 | Deployment | non-root Docker user, healthcheck, `/docs` hidden in production |
-| Tests | 103 tests: chunking, retrieval maths, index, RAG logic, every endpoint, auth, rate limit, LLM retry (against a local fake server), PDF loading |
+| Tests | 105 tests: chunking, retrieval maths, index, RAG logic, every endpoint, auth, rate limit, LLM retry (against a local fake server), PDF loading |
 
 ## Made for a hospital without cloud
 
@@ -258,22 +266,27 @@ One A100 makes about 0.4 answers per second (about 1,400 per hour), so the waiti
 10,000 real questions would take about 7 hours (an estimate from these runs, I did not run all 10,000 with the real model). To serve more users: more GPUs (the plot in the notebook calculates 2 and 4), a smaller model,
 or a faster model server such as vLLM. The first run of the 10,000 test found a real bug (a progress bar crashed when many questions were embedded at once; 2 of 10,000 requests failed). It is fixed and has a test.
 
-## Monitoring and cost
+## Monitoring (Prometheus and Grafana)
 
-The app shows its numbers at `/metrics` (questions, "not found", errors, answer time, tokens). Prometheus collects them and
-Grafana draws them: [docs/prometheus.yml](docs/prometheus.yml) and [docs/grafana_dashboard.json](docs/grafana_dashboard.json)
-(questions per second, median and 95% answer time, errors, share of "not found", tokens per minute, questions in progress, cost).
-Setup is in docs/DEPLOY.md. Both listen on 127.0.0.1 only.
+The app shows its numbers at `/metrics`: questions, "not found", errors, answer time, tokens. Prometheus collects them and Grafana draws them
+([docs/prometheus.yml](docs/prometheus.yml) and [docs/grafana_dashboard.json](docs/grafana_dashboard.json)). The dashboard has seven panels:
+questions per second, median and 95% answer time, errors, share of "not found", tokens per minute, questions in progress, and what the tokens would cost on a paid API.
+Setup is in docs/DEPLOY.md. Both tools listen on 127.0.0.1 only.
 
-About cost: the local model has no price per token; the price table for paid APIs is in the "Speed and cost" part above. The last dashboard panel multiplies the tokens by two
-prices you type in, to show what a paid API would cost for the same traffic. The prices in it are examples. The real cost here is the GPU server and its electricity.
+![Prometheus data of the load tests](docs/grafana_results.png)
 
-I did not use Mistral. The model is Qwen2.5 32B through Ollama; any OpenAI-compatible model works by changing `LLM_MODEL`.
+I could not take a real screenshot because the server has no browser. This picture is drawn with matplotlib from the same Prometheus data and the same queries that the Grafana panels use.
+Top row: the app alone with the fake LLM, from 10 up to 1,000 users at the same moment. The answer time grows with the number of users, and the right panel shows the users who are waiting inside the app.
+Bottom row: the real model with 32 users at the same moment, about 0.4 questions per second the whole time. The answer-time lines are rounded to the app's time buckets (one bucket covers 60 to 120 s),
+so they are approximate; the exact numbers are in the load test tables below. The app times a question from the moment the request arrives, so waiting for a free worker counts too.
+
+The last dashboard panel multiplies the tokens by two prices you type in. The prices in it are examples.
 
 ## Tests on every push
 
-`.github/workflows/tests.yml` installs the requirements and runs `pytest` on every push and pull request. I could only run the same steps
-by hand, the file itself has not run on GitHub yet.
+`.github/workflows/tests.yml` installs the requirements and runs `pytest` on every push and pull request. The first run on GitHub passed (56 seconds).
+The tests check the code. One of them also checks the search quality: it runs the sample questions with the offline embedder and fails if the hit rate drops,
+so a change that makes the search worse turns the build red. The real evaluation (141 questions, real model) needs a GPU and the books, so I run it by hand.
 
 ## Before going live (things code cannot do for you)
 
@@ -298,5 +311,6 @@ tests/      pytest suite (no downloads, no network)
 walkthrough.ipynb   step by step run of everything with the results (books, chunks, search, evaluation, tests)
 data/       books/ · sample/ · eval/ · index/ (generated)
 docs/       BOOKS.md (which books) · TUNING.md (every parameter explained)
-            prometheus.yml · grafana_dashboard.json (monitoring) · api_prices.csv · load_test_results.csv
+            prometheus.yml · grafana_dashboard.json · grafana_results.png (monitoring)
+            api_prices.csv · load_test_results.csv · tuning_results.csv · answer_check.csv
 ```

@@ -87,6 +87,7 @@ def create_app(settings: Settings | None = None, rag: RagService | None = None, 
         request_id = incoming if REQUEST_ID_OK.match(incoming) else uuid.uuid4().hex[:12]
         token = request_id_var.set(request_id)
         started = time.perf_counter()
+        request.state.started = started  # /v1/ask uses it, so waiting for a free worker counts too
         try:
             response = await call_next(request)
         finally:
@@ -142,7 +143,8 @@ def create_app(settings: Settings | None = None, rag: RagService | None = None, 
         started = time.perf_counter()
         result = rag_service.ask(body.question, body.top_k)
         latency_ms = int((time.perf_counter() - started) * 1000)
-        metrics.add_question(latency_ms / 1000, result.answered, result.prompt_tokens, result.completion_tokens)
+        waited = time.perf_counter() - request.state.started
+        metrics.add_question(waited, result.answered, result.prompt_tokens, result.completion_tokens)
 
         sources = [
             Source(

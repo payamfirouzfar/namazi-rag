@@ -21,3 +21,12 @@ def test_metrics_endpoint_follows_the_questions(client):
     client.post("/v1/ask", json=QUESTION)
     text = client.get("/metrics").text
     assert "namazi_questions_total 1" in text
+    assert "namazi_answer_seconds_count 1" in text
+
+
+def test_a_very_slow_answer_is_counted_in_the_long_buckets():
+    m = Metrics()
+    m.add_question(200, True, 100, 10)  # 200 seconds, like a long queue
+    text = m.text()
+    assert 'namazi_answer_seconds_bucket{le="120"} 0' in text
+    assert 'namazi_answer_seconds_bucket{le="300"} 1' in text

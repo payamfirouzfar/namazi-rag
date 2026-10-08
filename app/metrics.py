@@ -1,7 +1,7 @@
 """A few numbers for Prometheus, written as plain text. Counted per worker, like the rate limiter."""
 import threading
 
-SLOW_LIMITS = [0.5, 1, 2, 5, 10, 30, 60]  # answer time buckets, in seconds
+SLOW_LIMITS = [0.5, 1, 2, 5, 10, 30, 60, 120, 300, 600]  # answer time buckets, in seconds
 
 
 class Metrics:
