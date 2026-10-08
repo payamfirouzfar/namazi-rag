@@ -1,0 +1,11 @@
+# Prometheus asks the app for its numbers every 5 seconds.
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: namazi
+    static_configs:
+      - targets: ["127.0.0.1:8000"]
+        labels: {instance: app}
+      - targets: ["127.0.0.1:8001"]   # a test copy of the app, only while a load test runs
+        labels: {instance: loadtest}

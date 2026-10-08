@@ -1,0 +1,141 @@
+{"question": "How is acute kidney injury defined?", "evidence": "AKI is defined as any of the following"}
+{"question": "At what haemoglobin level is anaemia diagnosed in adults with CKD?", "evidence": "Diagnose anemia in adults and children"}
+{"question": "How is COPD diagnosed?", "evidence": "is mandatory to establish the diagnosis of COPD"}
+{"question": "Which corticosteroid is preferred in bacterial meningitis?", "evidence": "Dexamethasone should be considered the corticosteroid of choice"}
+{"question": "How is chronic kidney disease defined?", "evidence": "CKD is defined as abnormalities of kidney structure or function"}
+{"question": "Should patients with type 2 diabetes and CKD receive an SGLT2 inhibitor?", "evidence": "We recommend treating patients with type 2 diabetes (T2D), CKD, and an eGFR"}
+{"question": "When should the metformin dose be reduced in CKD?", "evidence": "Adjust the dose of metformin when the eGFR is"}
+{"question": "Should a lipid profile be checked in adults with CKD?", "evidence": "we recommend evaluation with a lipid profile"}
+{"question": "Should all patients with CKD be screened for hepatitis C?", "evidence": "We recommend screening all patients for HCV infection at the time of initial evaluation of CKD"}
+{"question": "Which immunosuppressive drugs are used for maintenance after kidney transplant?", "evidence": "We recommend using a combination of immunosuppressive medications as maintenance therapy"}
+{"question": "How should high phosphate be managed in CKD-MBD?", "evidence": "we suggest lowering elevated phosphate levels toward the normal range"}
+{"question": "Must malaria be confirmed by a test before treatment?", "evidence": "prompt parasitological confirmation by microscopy or an RDT for all patients suspected of having malaria"}
+{"question": "Who should be systematically screened for active tuberculosis?", "evidence": "household contacts and other close contacts should be systematically screened for active TB"}
+{"question": "For how long should babies be exclusively breastfed?", "evidence": "All babies should be exclusively breastfed from birth until 6 months of age"}
+{"question": "Are antibiotics needed for non-severe pneumonia with wheeze in children?", "evidence": "Treatment of non-severe pneumonia with wheeze"}
+{"question": "When should a lumbar puncture be done in suspected meningitis?", "evidence": "lumbar puncture should be performed as soon as possible"}
+{"question": "What is the most characteristic symptom of COPD?", "evidence": "Chronic dyspnea is the most characteristic symptom of COPD"}
+{"question": "When should ESA therapy be started in dialysis patients with anaemia?", "evidence": "we suggest initiation of ESA therapy when the Hb concentration is"}
+{"question": "How should shared medical equipment be handled between COVID-19 patients?", "evidence": "clean and disinfect between each patient use"}
+{"question": "تعریف بیماری مزمن کلیه چیست؟", "evidence": "CKD is defined as abnormalities of kidney structure or function"}
+{"question": "کدام کورتیکواستروئید برای مننژیت باکتریایی ترجیح داده می‌شود؟", "evidence": "Dexamethasone should be considered the corticosteroid of choice"}
+{"question": "What is the target INR for a patient on warfarin?", "evidence": "Adjusted dose for INR"}
+{"question": "Which drug is first choice for acute migraine?", "evidence": null}
+{"question": "What chemotherapy is used for breast cancer?", "evidence": null}
+{"question": "How is psoriasis treated?", "evidence": null}
+{"question": "What is the capital of France?", "evidence": null}
+{"question": "What is the dose of amoxicillin for strep throat in adults?", "evidence": null}
+{"question": "Which type of contrast media is recommended for patients at risk of contrast-induced AKI?", "evidence": "either iso-osmolar or low-osmolar iodinated contrast media"}
+{"question": "Does prophylactic furosemide protect the kidneys from AKI?", "evidence": "prophylactic furosemide was found to be ineffective or harmful"}
+{"question": "Should statins be continued in patients already taking them when dialysis starts?", "evidence": "we suggest that these agents be continued"}
+{"question": "Is routine follow-up measurement of lipid levels needed in adults with CKD?", "evidence": "follow-up measurement of lipid levels is not required for the majority of patients"}
+{"question": "Should children with newly identified CKD have a lipid profile?", "evidence": "In children with newly identified CKD"}
+{"question": "Should ESAs be used to deliberately raise haemoglobin above 13 g/dl?", "evidence": "not be used to intentionally increase the Hb concentration above 13"}
+{"question": "When is a trial of iron suggested for anaemic adults with CKD who are not on ESA?", "evidence": "we suggest a trial of IV iron"}
+{"question": "When should iron status be tested more often in patients on ESA?", "evidence": "more frequently when initiating or increasing ESA dose"}
+{"question": "What is the gold standard for the diagnostic evaluation of glomerular diseases?", "evidence": "for the diagnostic evaluation of glomerular diseases"}
+{"question": "Which prophylaxis should be considered in patients on high-dose prednisone or rituximab?", "evidence": "should be considered in patients receiving high-dose prednisone or other immunosuppressive agents"}
+{"question": "Which glomerular disease has a particularly high risk of thromboembolic events?", "evidence": "carries a particularly high risk of thromboembolic events"}
+{"question": "May an ACEi or ARB be considered in a patient with diabetes, albuminuria and normal blood pressure?", "evidence": "albuminuria, and normal blood pressure, treatment with an ACEi or ARB may be considered"}
+{"question": "What should a patient on an SGLT2 inhibitor do during illness or excessive alcohol intake?", "evidence": "temporarily withhold SGLT2i, keep drinking and eating"}
+{"question": "How often may HbA1c be measured if the glycemic target is not met?", "evidence": "may be measured as often as 4 times per year"}
+{"question": "What guidance is useful for people with CKD during an acute dehydrating illness?", "evidence": "Sick day rules have been endorsed as useful guidance"}
+{"question": "What should be monitored in people with CKD taking drugs with narrow therapeutic windows?", "evidence": "receiving medications with narrow therapeutic windows"}
+{"question": "What three things does the CGA classification of CKD use?", "evidence": "level of kidney function determined by GFR (G), and degree of albuminuria"}
+{"question": "Which new term replaces functional iron deficiency in the 2026 anaemia guideline?", "evidence": "iron-restricted erythropoiesis"}
+{"question": "Which paediatric transplant candidates should have a neurocognitive assessment?", "evidence": "neurocognitive assessment in pediatric candidates"}
+{"question": "Can standard WHO low-osmolarity ORS be used for rehydration in children with severe acute malnutrition?", "evidence": "should not be used for oral or nasogastric rehydration in children with severe acute malnutrition"}
+{"question": "How should the 90% oxygen saturation threshold for severe COVID-19 be interpreted?", "evidence": "was arbitrary, and should be interpreted cautiously when defining disease severity"}
+{"question": "In MIS-C, are corticosteroids or IVIG usually given first?", "evidence": "most patients will receive corticosteroids before they receive IVIG"}
+{"question": "How should blood films be prepared for malaria microscopy?", "evidence": "good-quality thick and thin blood films on the same slide"}
+{"question": "What counts as a malaria test in the WHO malaria diagnostic testing manual?", "evidence": "microscopic examination of a blood slide (thick or thin smear) for malaria parasites"}
+{"question": "When may chloramphenicol with benzylpenicillin be used as empiric treatment of bacterial meningitis?", "evidence": "only be considered for empiric treatment when ceftriaxone or cefotaxime are not immediately available"}
+{"question": "Should corticosteroids be routinely used in meningococcal meningitis during epidemics?", "evidence": "should not be routinely used in children and adults with suspected or probable meningococcal meningitis"}
+{"question": "Can peripheral blood tests replace lumbar puncture in suspected bacterial meningitis?", "evidence": "None of the included peripheral blood tests can be used to confirm or exclude the diagnosis of bacterial meningitis"}
+{"question": "How long must low mood or loss of interest last to suggest depression?", "evidence": "persistent depressed mood or loss of interest and pleasure for at least 2 weeks"}
+{"question": "What are delusions?", "evidence": "fixed false beliefs not shared by others"}
+{"question": "What is chest radiography used for after initial symptom screening for TB?", "evidence": "chest radiography can be used as a second screen to improve the pretest probability"}
+{"question": "Should bronchodilators be stopped before spirometry in a patient already taking them?", "evidence": "should not be interrupted for performing spirometry"}
+{"question": "Are e-cigarettes recommended as a smoking cessation aid in COPD?", "evidence": "effectiveness and safety of e-cigarettes as a smoking cessation aid"}
+{"question": "Which smokers should be encouraged to stop smoking?", "evidence": "smoking cessation should be continually encouraged for all individuals who smoke"}
+{"question": "Should protein intake be restricted in AKI to limit the rise in BUN?", "evidence": "nutritional protein administration should not be restricted"}
+{"question": "How should blood pressure targets be set in elderly patients?", "evidence": "should be set only after consideration of co-morbidities and should be achieved gradually"}
+{"question": "What should decisions about phosphate-lowering treatment in CKD be based on?", "evidence": "decisions about phosphate-lowering treatment should be based on progressively or persistently elevated serum phosphate"}
+{"question": "How should needles be disposed of in a dialysis unit?", "evidence": "Needles should be disposed of in closed, unbreakable containers"}
+{"question": "Which calcineurin inhibitor is suggested as first-line after kidney transplant?", "evidence": "tacrolimus be the first-line CNI used"}
+{"question": "مصرف نمک در بیماران مبتلا به بیماری مزمن کلیه و فشار خون بالا چقدر باید باشد؟", "evidence": "lowering salt intake to"}
+{"question": "در بیمار مبتلا به بیماری مزمن کلیه و هیپرکلسمی با کلسیتریول چه باید کرد؟", "evidence": "calcitriol or another vitamin D sterol be reduced or stopped"}
+{"question": "بیماری شدید سیتومگالوویروس در گیرنده پیوند کلیه با چه دارویی درمان می‌شود؟", "evidence": "be treated with intravenous ganciclovir"}
+{"question": "در مننژیت باکتریایی مشکوک درمان تجربی با کدام آنتی‌بیوتیک توصیه می‌شود؟", "evidence": "intravenous ceftriaxone or cefotaxime should be administered as empiric treatment"}
+{"question": "در مناطق با انتقال بالای سرخک، نخستین دوز واکسن سرخک در چه سنی تزریق می‌شود؟", "evidence": "should be given at 9 months of age, but also to all unvaccinated children"}
+{"question": "افراد مبتلا به اچ‌آی‌وی هر چند وقت یک بار باید از نظر سل فعال غربالگری شوند؟", "evidence": "should be systematically screened for active TB at each visit to a health facility"}
+{"question": "آیا بیماران مبتلا به سی‌اوپی‌دی باید واکسن کووید-۱۹ بزنند؟", "evidence": "people with COPD should have the COVID-19 vaccination"}
+{"question": "صرع چگونه تعریف می‌شود؟", "evidence": "characterized by recurrent unprovoked seizures"}
+{"question": "آیا خوابیدن به شکم در حالت بیدار برای بیماران شدید کووید-۱۹ پیشنهاد می‌شود؟", "evidence": "awake prone positioning of severely ill patients hospitalized with COVID-19"}
+{"question": "در بیماران بزرگسال مبتلا به بیماری مزمن کلیه از چه سطح هموگلوبینی به بالا نباید از ESA برای حفظ هموگلوبین استفاده کرد؟", "evidence": "ESAs not be used to maintain Hb concentration above 11.5 g/dl"}
+{"question": "آیا در بیماران دیالیزی شروع استاتین توصیه می‌شود؟", "evidence": "should not be initiated on statin or statin/ezetimibe treatment"}
+{"question": "How is acute appendicitis diagnosed and treated?", "evidence": null}
+{"question": "What is the recommended dose of dolutegravir for adults with HIV?", "evidence": null}
+{"question": "How is thalassaemia major managed?", "evidence": null}
+{"question": "How is cellulitis treated with antibiotics?", "evidence": null}
+{"question": "What first aid is recommended for a snake bite?", "evidence": null}
+{"question": "What is the dose of alteplase for acute ischaemic stroke?", "evidence": null}
+{"question": "How is glaucoma treated?", "evidence": null}
+{"question": "How is a cataract treated surgically?", "evidence": null}
+{"question": "How is Graves disease treated?", "evidence": null}
+{"question": "What is the recommended treatment for vitiligo?", "evidence": null}
+{"question": "How is carpal tunnel syndrome treated?", "evidence": null}
+{"question": "What is the dose of albendazole for hookworm infection?", "evidence": null}
+{"question": "How is Bell's palsy treated?", "evidence": null}
+{"question": "دوز لووتیروکسین برای درمان کم‌کاری تیروئید چقدر است؟", "evidence": null}
+{"question": "بیماری کرون چگونه درمان می‌شود؟", "evidence": null}
+{"question": "اگزما در کودکان چگونه درمان می‌شود؟", "evidence": null}
+{"question": "سنگ کلیه با لیتوتریپسی چگونه درمان می‌شود؟", "evidence": null}
+{"question": "برای بیماران در معرض نفروپاتی ناشی از ماده حاجب، کدام نوع ماده حاجب توصیه می‌شود؟", "evidence": "either iso-osmolar or low-osmolar iodinated contrast media"}
+{"question": "آیا فوروزماید پیشگیرانه از کلیه‌ها در برابر آسیب حاد کلیه محافظت می‌کند؟", "evidence": "prophylactic furosemide was found to be ineffective or harmful"}
+{"question": "آیا بیمارانی که از قبل استاتین مصرف می‌کنند، هنگام شروع دیالیز باید آن را ادامه دهند؟", "evidence": "we suggest that these agents be continued"}
+{"question": "آیا در بزرگسالان مبتلا به بیماری مزمن کلیه اندازه‌گیری روتین چربی خون در پیگیری لازم است؟", "evidence": "follow-up measurement of lipid levels is not required for the majority of patients"}
+{"question": "آیا کودکان مبتلا به بیماری مزمن کلیه که تازه تشخیص داده شده‌اند باید پروفایل چربی بدهند؟", "evidence": "In children with newly identified CKD"}
+{"question": "آیا برای افزایش عمدی هموگلوبین به بالاتر از ۱۳ گرم بر دسی‌لیتر باید از ESA استفاده کرد؟", "evidence": "not be used to intentionally increase the Hb concentration above 13"}
+{"question": "در بزرگسالان کم‌خون مبتلا به بیماری مزمن کلیه که ESA مصرف نمی‌کنند، چه زمانی آزمایش درمان با آهن پیشنهاد می‌شود؟", "evidence": "we suggest a trial of IV iron"}
+{"question": "استاندارد طلایی ارزیابی تشخیصی بیماری‌های گلومرولی چیست؟", "evidence": "for the diagnostic evaluation of glomerular diseases"}
+{"question": "کدام بیماری گلومرولی خطر بسیار بالایی برای حوادث ترومبوآمبولیک دارد؟", "evidence": "carries a particularly high risk of thromboembolic events"}
+{"question": "بیمار مصرف‌کننده مهارکننده SGLT2 در زمان بیماری یا مصرف زیاد الکل چه باید بکند؟", "evidence": "temporarily withhold SGLT2i, keep drinking and eating"}
+{"question": "اگر هدف کنترل قند خون حاصل نشود، هموگلوبین A1c را هر چند وقت می‌توان اندازه‌گیری کرد؟", "evidence": "may be measured as often as 4 times per year"}
+{"question": "در بیماری حاد همراه با کم‌آبی، چه راهنمایی‌ای برای افراد مبتلا به بیماری مزمن کلیه مفید است؟", "evidence": "Sick day rules have been endorsed as useful guidance"}
+{"question": "در راهنمای کم‌خونی سال ۲۰۲۶ چه اصطلاح جدیدی جایگزین کمبود آهن عملکردی شده است؟", "evidence": "iron-restricted erythropoiesis"}
+{"question": "آیا از ORS استاندارد کم‌اسمولار سازمان جهانی بهداشت می‌توان برای آبرسانی کودکان مبتلا به سوءتغذیه حاد شدید استفاده کرد؟", "evidence": "should not be used for oral or nasogastric rehydration in children with severe acute malnutrition"}
+{"question": "در سندرم التهابی چندسیستمی کودکان (MIS-C) معمولاً کورتیکواستروئید اول داده می‌شود یا IVIG؟", "evidence": "most patients will receive corticosteroids before they receive IVIG"}
+{"question": "لام‌های خون برای میکروسکوپی مالاریا چگونه باید تهیه شوند؟", "evidence": "good-quality thick and thin blood films on the same slide"}
+{"question": "چه زمانی می‌توان کلرامفنیکل همراه با بنزیل‌پنی‌سیلین را برای درمان تجربی مننژیت باکتریایی به کار برد؟", "evidence": "only be considered for empiric treatment when ceftriaxone or cefotaxime are not immediately available"}
+{"question": "آیا در همه‌گیری مننژیت مننگوکوکی باید کورتیکواستروئیدها به‌طور روتین استفاده شوند؟", "evidence": "should not be routinely used in children and adults with suspected or probable meningococcal meningitis"}
+{"question": "آیا در مننژیت باکتریایی مشکوک آزمایش‌های خون محیطی می‌توانند جای پونکسیون کمری را بگیرند؟", "evidence": "None of the included peripheral blood tests can be used to confirm or exclude the diagnosis of bacterial meningitis"}
+{"question": "خلق پایین یا از دست دادن علاقه باید چه مدت طول بکشد تا افسردگی مطرح شود؟", "evidence": "persistent depressed mood or loss of interest and pleasure for at least 2 weeks"}
+{"question": "هذیان‌ها چه هستند؟", "evidence": "fixed false beliefs not shared by others"}
+{"question": "پس از غربالگری اولیه علائم سل، رادیوگرافی قفسه سینه برای چه استفاده می‌شود؟", "evidence": "chest radiography can be used as a second screen to improve the pretest probability"}
+{"question": "آیا بیماری که از قبل برونکودیلاتور مصرف می‌کند باید قبل از اسپیرومتری آن را قطع کند؟", "evidence": "should not be interrupted for performing spirometry"}
+{"question": "آیا سیگار الکترونیکی به‌عنوان کمک ترک سیگار در بیماری انسدادی مزمن ریه توصیه می‌شود؟", "evidence": "effectiveness and safety of e-cigarettes as a smoking cessation aid"}
+{"question": "آیا برای کاهش افزایش اوره خون در آسیب حاد کلیه باید مصرف پروتئین را محدود کرد؟", "evidence": "nutritional protein administration should not be restricted"}
+{"question": "سوزن‌ها در بخش دیالیز چگونه باید دفع شوند؟", "evidence": "Needles should be disposed of in closed, unbreakable containers"}
+{"question": "پس از پیوند کلیه کدام مهارکننده کلسی‌نورین به‌عنوان خط اول پیشنهاد می‌شود؟", "evidence": "tacrolimus be the first-line CNI used"}
+{"question": "تصمیم درباره درمان کاهنده فسفات در بیماری مزمن کلیه بر چه اساسی باید باشد؟", "evidence": "decisions about phosphate-lowering treatment should be based on progressively or persistently elevated serum phosphate"}
+{"question": "هدف فشار خون در بیماران سالمند چگونه باید تعیین شود؟", "evidence": "should be set only after consideration of co-morbidities and should be achieved gradually"}
+{"question": "کدام کاندیدهای پیوند در کودکان باید ارزیابی عصبی-شناختی شوند؟", "evidence": "neurocognitive assessment in pediatric candidates"}
+{"question": "آسیب حاد کلیه چگونه تعریف می‌شود؟", "evidence": "AKI is defined as any of the following"}
+{"question": "بیماری انسدادی مزمن ریه چگونه تشخیص داده می‌شود؟", "evidence": "is mandatory to establish the diagnosis of COPD"}
+{"question": "آیا مالاریا قبل از درمان باید با آزمایش تأیید شود؟", "evidence": "prompt parasitological confirmation by microscopy or an RDT for all patients suspected of having malaria"}
+{"question": "درمان با ESA در بیماران دیالیزی کم‌خون چه زمانی باید شروع شود؟", "evidence": "we suggest initiation of ESA therapy when the Hb concentration is"}
+{"question": "نوزادان تا چه مدت باید فقط با شیر مادر تغذیه شوند؟", "evidence": "All babies should be exclusively breastfed from birth until 6 months of age"}
+{"question": "شاخص‌ترین علامت بیماری انسدادی مزمن ریه چیست؟", "evidence": "Chronic dyspnea is the most characteristic symptom of COPD"}
+{"question": "درمان آپاندیسیت حاد چیست؟", "evidence": null}
+{"question": "دوز دولوتگراویر در بزرگسالان مبتلا به اچ‌آی‌وی چقدر است؟", "evidence": null}
+{"question": "تالاسمی ماژور چگونه مدیریت می‌شود؟", "evidence": null}
+{"question": "سندرم تونل کارپ چگونه درمان می‌شود؟", "evidence": null}
+{"question": "فلج بل چگونه درمان می‌شود؟", "evidence": null}
+{"question": "دوز آلبندازول برای عفونت کرم قلابدار چقدر است؟", "evidence": null}
+{"question": "دوز آلتپلاز در سکته مغزی ایسکمیک حاد چقدر است؟", "evidence": null}
+{"question": "بیماری گریوز چگونه درمان می‌شود؟", "evidence": null}
+{"question": "آب مروارید چگونه با جراحی درمان می‌شود؟", "evidence": null}
+{"question": "گلوکوم چگونه درمان می‌شود؟", "evidence": null}
+{"question": "کمک‌های اولیه برای مارگزیدگی چیست؟", "evidence": null}
+{"question": "سلولیت با چه آنتی‌بیوتیکی درمان می‌شود؟", "evidence": null}

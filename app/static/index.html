@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Namazi Medical Reference</title>
+<style>
+  body { font-family: Tahoma, Arial, sans-serif; max-width: 760px; margin: 24px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 22px; }
+  textarea { width: 100%; height: 90px; padding: 8px; font-size: 16px; box-sizing: border-box; }
+  button { padding: 8px 18px; font-size: 15px; margin-top: 8px; cursor: pointer; }
+  input { padding: 6px; font-size: 14px; }
+  #answer { background: #f3f7fb; padding: 12px; margin-top: 16px; white-space: pre-wrap; border-radius: 6px; }
+  .source { border-top: 1px solid #ddd; padding: 8px 0; font-size: 14px; }
+  .note { color: #666; font-size: 13px; }
+  .error { color: #b00020; }
+</style>
+</head>
+<body>
+<h1>Namazi Hospital Medical Reference</h1>
+<p class="note">Ask a question in English or Persian. Answers come only from the hospital's reference books.</p>
+
+<p>API key: <input id="key" type="password" placeholder="ask the IT department"></p>
+<textarea id="question" dir="auto" placeholder="Type your question here"></textarea><br>
+<button id="ask">Ask</button> <span id="status" class="note"></span>
+
+<div id="result" hidden>
+  <div id="answer" dir="auto"></div>
+  <p>
+    Was this helpful?
+    <button id="up">Yes</button> <button id="down">No</button>
+    <span id="thanks" class="note"></span>
+  </p>
+  <h3>Sources</h3>
+  <div id="sources"></div>
+  <p id="disclaimer" class="note"></p>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let conversationId = null;
+
+$("key").value = localStorage.getItem("apiKey") || "";
+
+function headers() {
+  const h = { "Content-Type": "application/json" };
+  if ($("key").value) h["X-API-Key"] = $("key").value;
+  return h;
+}
+
+async function ask() {
+  const question = $("question").value.trim();
+  if (question.length < 3) return;
+  localStorage.setItem("apiKey", $("key").value);
+  $("status").textContent = "Searching the books...";
+  $("status").className = "note";
+  $("ask").disabled = true;
+  try {
+    const response = await fetch("/v1/ask", { method: "POST", headers: headers(), body: JSON.stringify({ question }) });
+    if (!response.ok) {
+      const problem = response.status === 401 ? "Wrong or missing API key." :
+                      response.status === 429 ? "Too many questions, wait a minute." :
+                      "The service is not available right now.";
+      throw new Error(problem);
+    }
+    show(await response.json());
+    $("status").textContent = "";
+  } catch (error) {
+    $("status").textContent = error.message;
+    $("status").className = "error";
+  }
+  $("ask").disabled = false;
+}
+
+function show(data) {
+  conversationId = data.conversation_id;
+  $("answer").textContent = data.answer;
+  $("disclaimer").textContent = data.disclaimer;
+  $("thanks").textContent = "";
+  $("sources").replaceChildren();
+  data.sources.forEach((source, number) => {
+    const div = document.createElement("div");
+    div.className = "source";
+    div.textContent = "[" + (number + 1) + "] " + source.book + ", page " + source.page + " - " + source.snippet + "...";
+    $("sources").appendChild(div);
+  });
+  $("result").hidden = false;
+}
+
+async function rate(value) {
+  if (!conversationId) return;
+  const response = await fetch("/v1/feedback", { method: "POST", headers: headers(),
+    body: JSON.stringify({ conversation_id: conversationId, feedback: value }) });
+  $("thanks").textContent = response.ok ? "Thank you." : "Could not save your answer.";
+}
+
+$("ask").onclick = ask;
+$("up").onclick = () => rate(1);
+$("down").onclick = () => rate(-1);

@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest>=8
+httpx>=0.27
+reportlab>=4
+pandas>=2
+matplotlib>=3.8
+nbconvert>=7
+ipykernel>=6

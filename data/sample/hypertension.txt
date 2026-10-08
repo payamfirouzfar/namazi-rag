@@ -1,0 +1,5 @@
+Sample text for testing the pipeline only. It is not a medical reference.
+
+Hypertension (HTN) is defined in the 2017 ACC/AHA guideline as a blood pressure of 130/80 mmHg or higher. Normal blood pressure is below 120/80 mmHg. Elevated blood pressure is a systolic pressure of 120 to 129 mmHg with a diastolic pressure below 80 mmHg. Stage 1 hypertension is a systolic pressure of 130 to 139 mmHg or a diastolic pressure of 80 to 89 mmHg. Stage 2 hypertension is a systolic pressure of at least 140 mmHg or a diastolic pressure of at least 90 mmHg.
+
+The first-line drug classes for most adults are thiazide diuretics, ACE inhibitors, angiotensin receptor blockers and calcium channel blockers. ACE inhibitors commonly cause a dry cough because they raise bradykinin levels. They can also cause hyperkalemia and angioedema. ACE inhibitors and angiotensin receptor blockers must not be used in pregnancy because they can harm the fetus.

@@ -1,0 +1,7 @@
+Sample text for testing the pipeline only. It is not a medical reference.
+
+Warfarin is a vitamin K antagonist. It reduces the synthesis of clotting factors II, VII, IX and X. The effect of warfarin is monitored with the INR (international normalized ratio). For most indications, such as atrial fibrillation and venous thromboembolism, the target INR is 2.0 to 3.0. For some mechanical heart valves a higher target of 2.5 to 3.5 is used.
+
+Warfarin has many interactions. Metronidazole and trimethoprim-sulfamethoxazole increase the INR. Rifampicin lowers the INR by inducing liver enzymes.
+
+Vitamin K reverses the effect of warfarin. In life-threatening bleeding, prothrombin complex concentrate is given together with intravenous vitamin K.

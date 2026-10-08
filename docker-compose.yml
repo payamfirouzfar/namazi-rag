@@ -1,0 +1,31 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    environment:
+      ENV: production
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data        # books, index and the SQLite database live here
+      - model_cache:/models     # downloaded embedding model
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  # the language model runs inside the hospital, so no question ever leaves the network
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - ollama_models:/root/.ollama
+    # with an NVIDIA GPU, add this so the model runs on it:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - capabilities: [gpu]
+    restart: unless-stopped
+
+volumes:
+  model_cache:
+  ollama_models:

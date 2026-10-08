@@ -1,0 +1,7 @@
+Sample text for testing the pipeline only. It is not a medical reference.
+
+Diabetes mellitus is diagnosed when the fasting plasma glucose is 126 mg/dL or higher, when the HbA1c is 6.5 percent or higher, when the 2-hour plasma glucose during an oral glucose tolerance test is 200 mg/dL or higher, or when a random plasma glucose is 200 mg/dL or higher in a patient with classic symptoms. Without clear symptoms, the result should be confirmed by repeat testing.
+
+Metformin is the usual first-line drug for type 2 diabetes. Metformin should not be started when the estimated glomerular filtration rate is below 30 mL/min because of the risk of lactic acidosis.
+
+Diabetic ketoacidosis (DKA) is a medical emergency, most often seen in type 1 diabetes. It is characterized by hyperglycemia, high anion gap metabolic acidosis and ketonemia. Treatment consists of intravenous fluids, insulin infusion and replacement of potassium. Potassium must be checked before insulin is started because insulin drives potassium into cells.
