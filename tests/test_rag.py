@@ -1,5 +1,6 @@
 from app.llm import LLMError, LLMResult
-from app.rag import NO_ANSWER, NOT_FOUND_MESSAGE, TRANSLATE_PROMPT, RagService, build_context, has_persian
+from app.rag import (NO_ANSWER, NOT_FOUND_MESSAGE, TRANSLATE_PROMPT, URGENT_MESSAGE, RagService, build_context,
+                     has_persian, looks_urgent)
 from app.retriever import Hit
 from app.chunking import Chunk
 
@@ -29,6 +30,14 @@ def test_no_answer_from_llm_becomes_polite_message(rag, llm):
 
 def test_no_answer_followed_by_more_text_is_still_no_answer(rag, llm):
     llm.text = "NO_ANSWER. The sources only talk about diabetes."
+    result = rag.ask("What is the INR target for warfarin?")
+    assert not result.answered
+    assert result.answer == NOT_FOUND_MESSAGE
+
+
+def test_no_answer_at_the_end_after_an_explanation_is_still_no_answer(rag, llm):
+    # found by the patient questions: the model explained first and wrote NO_ANSWER last, and a patient saw that word
+    llm.text = "The sources provided do not explicitly state this. Therefore, the answer is:\n\nNO_ANSWER"
     result = rag.ask("What is the INR target for warfarin?")
     assert not result.answered
     assert result.answer == NOT_FOUND_MESSAGE
@@ -119,3 +128,26 @@ def test_failed_translation_falls_back_to_the_original_question(index):
 def test_has_persian():
     assert has_persian(PERSIAN_QUESTION)
     assert not has_persian("What is the INR target?")
+
+
+def test_an_urgent_question_starts_with_the_emergency_line(rag, llm):
+    result = rag.ask("I have chest pain and the INR target for warfarin is what?")
+    assert result.answer.startswith(URGENT_MESSAGE)
+    assert "[1]" in result.answer  # the normal answer is still there
+
+
+def test_urgent_words_work_in_persian_with_a_half_space():
+    assert looks_urgent("درد قفسه سینه دارم، چه کنم؟")
+    assert looks_urgent("نمی\u200cتوانم نفس بکشم")
+    assert not looks_urgent("What is the INR target for warfarin?")
+
+
+def test_a_normal_question_has_no_emergency_line(rag, llm):
+    assert URGENT_MESSAGE not in rag.ask("What is the INR target for warfarin?").answer
+
+
+def test_a_persian_answer_with_broken_letters_is_not_shown(rag, llm):
+    llm.text = "وارفارین 你好 [1]"
+    result = rag.ask("هدف INR برای وارفارین چیست؟")
+    assert not result.answered
+    assert result.answer == NOT_FOUND_MESSAGE

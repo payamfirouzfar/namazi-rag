@@ -9,3 +9,5 @@ data/index/
 data/tuning/
 data/*.db
 data/*.db-*
+data/patient_books/
+data/index_patient/

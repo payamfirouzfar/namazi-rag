@@ -111,6 +111,35 @@ To see how the app copes with many users, run a test copy (own port and database
 For the real model, skip the fake server and the `LLM_*` settings, so the test copy reads your `.env` and uses your Ollama. A real run is slow
 (about 0.4 questions per second on one A100). Delete `data/loadtest.db` afterwards. Results are in the README.
 
+## HTTPS with nginx (not tested)
+The app speaks plain HTTP. Put nginx in front and let it handle the certificate. This is the usual setup, but I did not run it on the pilot server (no root there):
+
+    server {
+        listen 443 ssl;
+        server_name hospital.example;
+        ssl_certificate     /etc/ssl/certs/hospital.pem;       # your certificate
+        ssl_certificate_key /etc/ssl/private/hospital.key;
+        location / {
+            proxy_pass http://127.0.0.1:8000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-For $remote_addr;
+            proxy_read_timeout 300s;                           # a slow answer can take a while
+            limit_req zone=ask burst=10;                       # add: limit_req_zone $binary_remote_addr zone=ask:10m rate=30r/m; (in http{})
+        }
+    }
+
+Keep `ENV=production` and the `API_KEYS` in the `.env`. Do not open port 8000 to the network, only 443.
+
+## Alerts
+`docs/alerts.yml` has four alerts (app down, errors on the rise, slow answers, too many "not found"). `docs/prometheus.yml` loads them and they show up in Prometheus under "Alerts".
+To get an email or a message you need Alertmanager, which is not set up here. Check the file with `promtool check config docs/prometheus.yml`.
+
+## Patient questions
+To test with the patient question file: `python -m scripts.fetch_sources data/eval/patient_questions_english_persian_525.csv`, then
+`BOOKS_DIR=data/patient_books INDEX_DIR=data/index_patient python -m scripts.ingest`, then run `python -m scripts.check_answers --judge --eval data/eval/patient_questions_en.jsonl`
+with `INDEX_DIR=data/index_patient` (the same for `_fa` and `_open`). It takes about 2 hours for all 1,050 questions on one GPU, because every question needs 2 or 3 LLM calls.
+Check the licence of every site before you use the pages. Use `python -m scripts.review_sample` to make the sheet for doctors.
+
 ## Limits to tell the hospital
 - One server, one SQLite file. For many servers use Postgres and a shared rate limit.
 - The small local model is slower and less careful than the big online ones. Check the answers (step 5) before trusting it.

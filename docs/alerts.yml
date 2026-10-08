@@ -1,0 +1,29 @@
+# Alerts for the app. They show up in Prometheus under "Alerts".
+# To get an email or a message, add Alertmanager (not set up here).
+groups:
+  - name: namazi
+    rules:
+      - alert: AppDown
+        expr: up{instance="app"} == 0
+        for: 2m
+        annotations:
+          summary: The app does not answer to Prometheus for 2 minutes.
+
+      - alert: ErrorsOnTheRise
+        expr: increase(namazi_errors_total{instance="app"}[10m]) > 5
+        annotations:
+          summary: More than 5 failed questions in 10 minutes. Is the LLM running?
+
+      - alert: AnswersAreSlow
+        expr: histogram_quantile(0.95, sum by (le) (rate(namazi_answer_seconds_bucket{instance="app"}[5m]))) > 60
+        for: 5m
+        annotations:
+          summary: 95% of the answers take more than 60 seconds. Too many users for one GPU?
+
+      - alert: TooManyNotFound
+        expr: >
+          sum(rate(namazi_not_found_total{instance="app"}[30m])) / sum(rate(namazi_questions_total{instance="app"}[30m])) > 0.5
+          and sum(rate(namazi_questions_total{instance="app"}[30m])) > 0.002
+        for: 15m
+        annotations:
+          summary: More than half of the questions get "not found". A book may be missing, or the search is broken.

@@ -31,6 +31,13 @@ JUDGE_PROMPT = ("You check an answer against its sources. Reply SUPPORTED if eve
 PERSIAN_DIGITS = str.maketrans("۰۱۲۳۴۵۶۷۸۹", "0123456789")
 
 
+def holds_evidence(item: dict, hit) -> bool:
+    """Is this the right passage? It has the evidence phrase, or it comes from one of the books the question expects."""
+    if item.get("evidence"):
+        return norm(item["evidence"]) in norm(hit.chunk.text)
+    return hit.chunk.book in item.get("books", [])
+
+
 def numbers_in(text: str) -> set[str]:
     text = re.sub(r"\[\d+\]", " ", text.translate(PERSIAN_DIGITS))  # the [1] citations are not facts
     return set(re.findall(r"\d+(?:\.\d+)?", text))
@@ -39,6 +46,7 @@ def numbers_in(text: str) -> set[str]:
 def made_up_numbers(answer: str, sources) -> int:
     """How many numbers of the answer do not appear in any source. A wrong dose or lab value is the worst mistake."""
     source_numbers = numbers_in(" ".join(h.chunk.text for h in sources))
+    answer = re.sub(r"(?m)^\s*\d+[.)]\s", " ", answer)  # the 1. 2. 3. of a list are not facts either
     return len(numbers_in(answer) - source_numbers)
 
 
@@ -75,16 +83,16 @@ def main() -> int:
             continue
         seconds = time.time() - started
 
-        evidence = item.get("evidence")
+        known = bool(item.get("evidence") or item.get("books"))  # does the books hold an answer?
         cited = [int(n) for n in re.findall(r"\[(\d+)\]", result.answer)]
         cited_hits = [result.sources[n - 1] for n in cited if 1 <= n <= len(result.sources)]
         row = {
             "question": item["question"],
-            "answerable": bool(evidence),
+            "answerable": known,
             "answered": result.answered,
             "has_citation": bool(cited_hits),
-            "evidence_in_sources": bool(evidence) and any(norm(evidence) in norm(h.chunk.text) for h in result.sources),
-            "evidence_cited": bool(evidence) and any(norm(evidence) in norm(h.chunk.text) for h in cited_hits),
+            "evidence_in_sources": known and any(holds_evidence(item, h) for h in result.sources),
+            "evidence_cited": known and any(holds_evidence(item, h) for h in cited_hits),
             "made_up_numbers": made_up_numbers(result.answer, result.sources) if result.answered else 0,
             "bad_citation": any(not 1 <= n <= len(result.sources) for n in cited),
             "judge_supported": judge_supported(llm, item["question"], result.answer, result.sources, s.max_context_chars)
@@ -96,7 +104,7 @@ def main() -> int:
         }
         rows.append(row)
 
-        if evidence:
+        if known:
             verdict = "OK " if row["evidence_cited"] else "MISS"
         else:
             verdict = "OK " if not result.answered else "BAD"  # it should have said "not found"

@@ -52,3 +52,19 @@ def test_judge_reads_the_first_word_of_the_reply():
     sources = [Hit("Dexamethasone is preferred.")]
     assert judge_supported(FakeLLM("SUPPORTED"), "q", "a", sources, 1000) is True
     assert judge_supported(FakeLLM("NOT_SUPPORTED because..."), "q", "a", sources, 1000) is False
+
+
+def test_a_question_can_name_the_books_that_should_be_cited():
+    from scripts.check_answers import holds_evidence
+
+    hit = Hit("Some text.")
+    hit.chunk.book = "NHS Depression"
+    assert holds_evidence({"books": ["NHS Depression", "WHO Depression"]}, hit) is True
+    assert holds_evidence({"books": ["MedlinePlus Asthma"]}, hit) is False
+    assert holds_evidence({"evidence": "some text"}, hit) is True  # the evidence phrase still works
+
+
+def test_the_numbers_of_a_list_are_not_facts():
+    sources = [Hit("Check your blood sugar every day.")]
+    answer = "Questions to ask:\n1. How often should I check my blood sugar? [1]\n2. What is my target? [1]"
+    assert made_up_numbers(answer, sources) == 0

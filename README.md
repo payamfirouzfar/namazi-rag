@@ -8,7 +8,7 @@ says so instead of guessing.
 ## Status: what is real and what is not
 
 I built this for a hospital pilot. It has **not** been used in a hospital: no staff, no patients and no real logs exist, and
-I could not have shared them anyway. What is real: the code, the 105 tests, the evaluation on 20 public guidelines (results below),
+I could not have shared them anyway. What is real: the code, the 118 tests, the evaluation on 20 public guidelines (results below),
 the load tests, the monitoring and the deployment steps I ran myself on a GPU server. What is not: any real-world usage.
 The load tests use made-up traffic (the 76 English eval questions, asked again and again). Answers are reference text from books,
 not medical advice.
@@ -20,6 +20,7 @@ not medical advice.
 - It says "not found" for 32 of the 34 questions the books cannot answer. The 2 misses are both Persian, and they are made-up answers. More below.
 - **Speed:** search takes about 21 ms, a whole answer about 3 s on one A100.
 - **Many users:** the app alone took 10,000 users with no errors (about 20 questions per second). The real limit is the model: one GPU makes about 0.4 answers per second.
+- **Patient questions:** 525 questions in English and Persian, answered from public web pages. Roughly 7 in 10 get an answer that cites the right page, the rest get an honest "I don't know". Persian is weaker. Details below.
 - **Cost:** no token price with the local model. The same 10,000 questions on a paid API would cost roughly USD 6 to 47.
 
 ## How it works
@@ -43,7 +44,7 @@ and tuning on a dev set that is kept apart from the test set.
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
-python -m pytest                                   # 105 tests, a few seconds
+python -m pytest                                   # 118 tests, a few seconds
 
 # try it on the 4 tiny sample files with the offline test embedder
 export EMBEDDING_MODEL=hash
@@ -162,7 +163,7 @@ Held-out test split (43 questions, 32 answerable): hit rate@5 0.594, MRR 0.329. 
 | Data safety | all SQL parameterized, SQLite in WAL mode |
 | Errors | no stack traces or internal addresses sent to clients |
 | Deployment | non-root Docker user, healthcheck, `/docs` hidden in production |
-| Tests | 105 tests: chunking, retrieval maths, index, RAG logic, every endpoint, auth, rate limit, LLM retry (against a local fake server), PDF loading |
+| Tests | 118 tests: chunking, retrieval maths, index, RAG logic, every endpoint, auth, rate limit, LLM retry (against a local fake server), PDF loading |
 
 ## Made for a hospital without cloud
 
@@ -217,6 +218,44 @@ On the 38 facts that were asked in both languages, the right passage was cited 3
 | other index (400 words, 1:2 mix) | not better, see above | no |
 
 So the invented answers are still open. Doctors still need to read the answers in the csv file.
+
+### Patient questions
+
+A second test, closer to a real product: 525 questions that patients might ask, in English and in Persian (`data/eval/patient_questions_english_persian_525.csv`),
+answered from public web pages (MedlinePlus, NHS, WHO, NIMH, NIDDK) that I downloaded with `python -m scripts.fetch_sources` into a **separate** knowledge base of 25 pages.
+The csv has the questions and the pages they belong to, but **no reference answers**, so I can't say "this answer is right". I measure whether it answers or says "I don't know",
+whether it cites the named page, whether the numbers are in the sources, and what the LLM judge thinks. Q001 to Q500 are 25 diseases times the same 20 question types, so this tests topic
+coverage, not 500 different patients. Flu, COVID and stroke pages could not be downloaded (CDC blocks scripts) and the NHS breast cancer page has no text, so those topics have no page.
+Their questions and 50 forum-style questions are the "open" questions, where "I don't know" is mostly the right answer. The page licences are not checked and the pages are not committed.
+The csv in the repo was rebuilt from the text of the original file (the two forum links are shortened); replace it with the original if you have it.
+
+| 420 questions per language | English | Persian |
+|---|---|---|
+| answered | 287 (68%) | 317 (76%) |
+| said "I don't know" | 133 (32%) | 102 (24%) |
+| answers citing the expected page | 284 of 287 (99%) | 310 of 317 (98%) |
+| answers with a number that is in no source | 11 (4%) | 26 (8%) |
+| answers the LLM judge doubts | 27 (9%) | **74 (23%)** |
+| answers with broken letters | 0 | **13** |
+| median time per question (three runs shared the GPU) | 4.4 s | 6.5 s |
+
+(Persian: 419 of 420, one question made the model server fail.) The 210 open questions got "I don't know" 188 times; the 22 answers came from nearby pages, for example the asthma page does talk about flu.
+The web pages explain a disease well but say little about follow-up (95% "I don't know"), a missed dose (86%) or how to ask about a test result (81%). That is honest but thin.
+
+**What I fixed because of this test:** 10 English answers ended with the literal word `NO_ANSWER` (the model explained first, and the app only looked at the start of the reply). Now a reply that contains it anywhere
+becomes "I don't know". I also added an emergency line for urgent words (chest pain, trouble breathing, suicide ...), a guard that shows "I don't know" instead of a Persian answer with Chinese, Japanese or Korean letters,
+Prometheus alerts (`docs/alerts.yml`) and a sheet for doctors (`python -m scripts.review_sample`, 100 answers, `docs/doctor_review.csv`).
+The judge is the same model as the answerer and reads Persian worse than English, so the Persian doubts are a warning, not an exact number.
+
+### Where the time goes
+
+`python -m scripts.time_steps` times every step of an answer (30 English and 30 Persian questions, one at a time, `docs/time_steps.csv`, plots in the notebook):
+
+![One answer, step by step](docs/time_steps.png)
+
+For an English question, writing the answer takes 62% of the time (about 2.8 s) and reading the sources 37% (about 1.6 s). The whole search (embedding, dense, BM25, merge) takes about 36 ms, under 1%.
+A Persian question also needs a translation call (1.1 s, 17%). **So the LLM is what to optimize**, in this order: a faster or smaller model or server (writing), fewer chunks in the prompt (reading, but the right passage is found less often:
+86% in the top 5, 72% in the top 3), a cheaper translation. The search is not worth touching. These steps add up to a little more than the 3.1 s and 4.9 s medians of the staff answer check; I don't know the exact reason.
 
 ### Speed and cost
 
@@ -288,6 +327,23 @@ The last dashboard panel multiplies the tokens by two prices you type in. The pr
 The tests check the code. One of them also checks the search quality: it runs the sample questions with the offline embedder and fails if the hit rate drops,
 so a change that makes the search worse turns the build red. The real evaluation (141 questions, real model) needs a GPU and the books, so I run it by hand.
 
+## Is it production ready?
+
+No. The code side is in good shape, the rest needs people:
+
+| Part | State |
+|---|---|
+| Tests, CI, metrics, dashboard, alerts, backups, restart after a crash | done and tested |
+| "I don't know" and citations | done |
+| Emergency line, broken-text guard | done, a simple word list that a clinician must review |
+| A doctor reads the answers | **not done**: `docs/doctor_review.csv` is ready, someone has to fill it in |
+| Persian quality | **weak**: the judge doubts 23% of the answers |
+| Missing pages (flu, COVID, stroke, breast cancer), thin topics (follow-up, missed dose) | **not done** |
+| Page licences | **not checked** |
+| HTTPS, user accounts, privacy policy for patient questions | **not done**: nginx steps are in docs/DEPLOY.md, untested |
+| Capacity | one GPU gives about 0.4 answers per second, 20 users at the same moment wait about 50 s |
+| Medical-device rules | **not checked**: health software can be regulated, ask a lawyer |
+
 ## Before going live (things code cannot do for you)
 
 1. **Clinical validation.** Have clinicians review a few hundred real answers. Use the thumbs-down data.
@@ -307,10 +363,13 @@ app/        main.py (API) · rag.py (prompt + answer logic) · retriever.py (hyb
 scripts/    ingest.py (build the index) · tune.py (find good settings)
             check_answers.py (test the answers with the real LLM) · report.py (usage report)
             load_test.py (many users at once) · fake_llm.py (a fake model for load tests)
+            time_steps.py (time every step of an answer) · fetch_sources.py (download the pages for the patient questions)
+            review_sample.py (a sheet for doctors)
 tests/      pytest suite (no downloads, no network)
 walkthrough.ipynb   step by step run of everything with the results (books, chunks, search, evaluation, tests)
 data/       books/ · sample/ · eval/ · index/ (generated)
 docs/       BOOKS.md (which books) · TUNING.md (every parameter explained)
             prometheus.yml · grafana_dashboard.json · grafana_results.png (monitoring)
-            api_prices.csv · load_test_results.csv · tuning_results.csv · answer_check.csv
+            alerts.yml · api_prices.csv · load_test_results.csv · tuning_results.csv · answer_check.csv
+            patient_check_*.csv · time_steps.csv · doctor_review.csv
 ```

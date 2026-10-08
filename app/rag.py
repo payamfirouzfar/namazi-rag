@@ -1,4 +1,5 @@
 import logging
+import re
 from dataclasses import dataclass, field
 
 from app.llm import LLMError, LLMResult
@@ -12,6 +13,18 @@ NOT_FOUND_MESSAGE = (
     "I could not find the answer to this question in the hospital's reference books. "
     "پاسخ این پرسش در منابع موجود پیدا نشد."
 )
+
+URGENT_MESSAGE = (
+    "If this is an emergency (chest pain, trouble breathing, heavy bleeding, sudden weakness or thoughts of harming "
+    "yourself), call your local emergency number now (115 in Iran). "
+    "اگر وضعیت اورژانسی است (درد قفسه سینه، مشکل در نفس کشیدن، خونریزی شدید، ضعف ناگهانی یا فکر آسیب به خود)، همین حالا با اورژانس ۱۱۵ تماس بگیرید."
+)
+URGENT_WORDS = (
+    "chest pain", "cannot breathe", "can't breathe", "trouble breathing", "difficulty breathing", "heavy bleeding",
+    "coughing blood", "suicide", "kill myself", "overdose", "unconscious", "seizure",
+    "درد قفسه سینه", "نمی توانم نفس", "نفس نمی", "خونریزی شدید", "خودکشی", "مسمومیت", "بی هوش", "تشنج",
+)
+BROKEN_LETTERS = re.compile("[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]")  # Chinese, Japanese and Korean letters
 
 SYSTEM_PROMPT = f"""You are a clinical reference assistant for the medical staff of Namazi Hospital.
 You answer questions using ONLY the numbered sources given in the user message.
@@ -44,6 +57,12 @@ class Answer:
 
 def has_persian(text: str) -> bool:
     return any("؀" <= letter <= "ۿ" for letter in text)
+
+
+def looks_urgent(question: str) -> bool:
+    """A simple word list, so it is easy to read and to extend. A clinician should review it."""
+    text = question.lower().replace("\u200c", " ")  # Persian words often have a half space
+    return any(word in text for word in URGENT_WORDS)
 
 
 def build_context(hits: list[Hit], max_chars: int) -> tuple[str, list[Hit]]:
@@ -81,6 +100,16 @@ class RagService:
         return english or question
 
     def ask(self, question: str, top_k: int | None = None) -> Answer:
+        answer = self.find_answer(question, top_k)
+        # the model sometimes writes Chinese or Korean letters into a Persian answer: better to show nothing than broken text
+        if has_persian(question) and BROKEN_LETTERS.search(answer.answer):
+            log.warning("the answer to a Persian question had broken letters, not showing it")
+            answer = Answer(NOT_FOUND_MESSAGE, False, answer.sources, answer.prompt_tokens, answer.completion_tokens)
+        if looks_urgent(question):
+            answer.answer = URGENT_MESSAGE + "\n\n" + answer.answer
+        return answer
+
+    def find_answer(self, question: str, top_k: int | None = None) -> Answer:
         hits = self.retriever.search(self.english_for_search(question), top_k)
         best_score = max((h.dense_score for h in hits), default=0.0)
         log.info("search found %d chunks, best similarity %.3f", len(hits), best_score)
@@ -96,8 +125,8 @@ class RagService:
             SYSTEM_PROMPT, USER_TEMPLATE.format(context=context, question=question)
         )
 
-        # the model sometimes adds a sentence after NO_ANSWER, so only check how the reply starts
-        if result.text.strip().upper().startswith(NO_ANSWER):
+        # the model sometimes explains first and writes NO_ANSWER at the end, or adds a sentence after it
+        if NO_ANSWER in result.text.upper():
             log.info("the LLM found no answer in the sources")
             return Answer(NOT_FOUND_MESSAGE, False, used, result.prompt_tokens, result.completion_tokens)
         log.info("answered with %d sources", len(used))

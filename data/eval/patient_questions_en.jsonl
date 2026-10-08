@@ -1,0 +1,420 @@
+{"id": "Q001", "question": "What is Type 2 diabetes in simple terms?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q002", "question": "What symptoms are commonly linked to Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q003", "question": "Can symptoms linked to Type 2 diabetes come and go or change over time?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q004", "question": "What factors can increase a person's chance of developing Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q005", "question": "Are there known triggers or situations that may make Type 2 diabetes symptoms worse?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q006", "question": "How do clinicians usually decide whether someone has Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q007", "question": "Which tests or examinations may be used to assess Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q008", "question": "How can I ask my clinician to explain an unclear test result related to Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q009", "question": "What treatment options might a clinician discuss for Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q010", "question": "What information helps a clinician choose a treatment plan for Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q011", "question": "What should I ask about the purpose of medicines used for Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q012", "question": "What side effects or medicine interactions should I ask about if I am treated for Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q013", "question": "If I miss a dose of a medicine related to Type 2 diabetes, who should I contact for advice?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q014", "question": "How could Type 2 diabetes affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q015", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q016", "question": "What kinds of physical activity should I ask about if I have Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q017", "question": "What complications or related health problems should I ask a clinician about for Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q018", "question": "How often might a clinician recommend follow-up or monitoring for Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q019", "question": "Could my age, family history, pregnancy, or another health condition affect care for Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q020", "question": "What are useful questions to take to my next appointment about Type 2 diabetes?", "books": ["MedlinePlus Type 2 diabetes", "WHO Type 2 diabetes"]}
+{"id": "Q021", "question": "What is Asthma in simple terms?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q022", "question": "What symptoms are commonly linked to Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q023", "question": "Can symptoms linked to Asthma come and go or change over time?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q024", "question": "What factors can increase a person's chance of developing Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q025", "question": "Are there known triggers or situations that may make Asthma symptoms worse?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q026", "question": "How do clinicians usually decide whether someone has Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q027", "question": "Which tests or examinations may be used to assess Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q028", "question": "How can I ask my clinician to explain an unclear test result related to Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q029", "question": "What treatment options might a clinician discuss for Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q030", "question": "What information helps a clinician choose a treatment plan for Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q031", "question": "What should I ask about the purpose of medicines used for Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q032", "question": "What side effects or medicine interactions should I ask about if I am treated for Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q033", "question": "If I miss a dose of a medicine related to Asthma, who should I contact for advice?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q034", "question": "How could Asthma affect my sleep, work, study, or everyday activities?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q035", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q036", "question": "What kinds of physical activity should I ask about if I have Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q037", "question": "What complications or related health problems should I ask a clinician about for Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q038", "question": "How often might a clinician recommend follow-up or monitoring for Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q039", "question": "Could my age, family history, pregnancy, or another health condition affect care for Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q040", "question": "What are useful questions to take to my next appointment about Asthma?", "books": ["NHS Asthma", "MedlinePlus Asthma"]}
+{"id": "Q041", "question": "What is High blood pressure in simple terms?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q042", "question": "What symptoms are commonly linked to High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q043", "question": "Can symptoms linked to High blood pressure come and go or change over time?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q044", "question": "What factors can increase a person's chance of developing High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q045", "question": "Are there known triggers or situations that may make High blood pressure symptoms worse?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q046", "question": "How do clinicians usually decide whether someone has High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q047", "question": "Which tests or examinations may be used to assess High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q048", "question": "How can I ask my clinician to explain an unclear test result related to High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q049", "question": "What treatment options might a clinician discuss for High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q050", "question": "What information helps a clinician choose a treatment plan for High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q051", "question": "What should I ask about the purpose of medicines used for High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q052", "question": "What side effects or medicine interactions should I ask about if I am treated for High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q053", "question": "If I miss a dose of a medicine related to High blood pressure, who should I contact for advice?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q054", "question": "How could High blood pressure affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q055", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q056", "question": "What kinds of physical activity should I ask about if I have High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q057", "question": "What complications or related health problems should I ask a clinician about for High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q058", "question": "How often might a clinician recommend follow-up or monitoring for High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q059", "question": "Could my age, family history, pregnancy, or another health condition affect care for High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q060", "question": "What are useful questions to take to my next appointment about High blood pressure?", "books": ["MedlinePlus High blood pressure"]}
+{"id": "Q061", "question": "What is Coronary artery disease in simple terms?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q062", "question": "What symptoms are commonly linked to Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q063", "question": "Can symptoms linked to Coronary artery disease come and go or change over time?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q064", "question": "What factors can increase a person's chance of developing Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q065", "question": "Are there known triggers or situations that may make Coronary artery disease symptoms worse?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q066", "question": "How do clinicians usually decide whether someone has Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q067", "question": "Which tests or examinations may be used to assess Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q068", "question": "How can I ask my clinician to explain an unclear test result related to Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q069", "question": "What treatment options might a clinician discuss for Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q070", "question": "What information helps a clinician choose a treatment plan for Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q071", "question": "What should I ask about the purpose of medicines used for Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q072", "question": "What side effects or medicine interactions should I ask about if I am treated for Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q073", "question": "If I miss a dose of a medicine related to Coronary artery disease, who should I contact for advice?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q074", "question": "How could Coronary artery disease affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q075", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q076", "question": "What kinds of physical activity should I ask about if I have Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q077", "question": "What complications or related health problems should I ask a clinician about for Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q078", "question": "How often might a clinician recommend follow-up or monitoring for Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q079", "question": "Could my age, family history, pregnancy, or another health condition affect care for Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q080", "question": "What are useful questions to take to my next appointment about Coronary artery disease?", "books": ["MedlinePlus Coronary artery disease", "WHO Coronary artery disease"]}
+{"id": "Q081", "question": "What is COPD (chronic obstructive pulmonary disease) in simple terms?", "books": ["MedlinePlus COPD"]}
+{"id": "Q082", "question": "What symptoms are commonly linked to COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q083", "question": "Can symptoms linked to COPD (chronic obstructive pulmonary disease) come and go or change over time?", "books": ["MedlinePlus COPD"]}
+{"id": "Q084", "question": "What factors can increase a person's chance of developing COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q085", "question": "Are there known triggers or situations that may make COPD (chronic obstructive pulmonary disease) symptoms worse?", "books": ["MedlinePlus COPD"]}
+{"id": "Q086", "question": "How do clinicians usually decide whether someone has COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q087", "question": "Which tests or examinations may be used to assess COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q088", "question": "How can I ask my clinician to explain an unclear test result related to COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q089", "question": "What treatment options might a clinician discuss for COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q090", "question": "What information helps a clinician choose a treatment plan for COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q091", "question": "What should I ask about the purpose of medicines used for COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q092", "question": "What side effects or medicine interactions should I ask about if I am treated for COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q093", "question": "If I miss a dose of a medicine related to COPD (chronic obstructive pulmonary disease), who should I contact for advice?", "books": ["MedlinePlus COPD"]}
+{"id": "Q094", "question": "How could COPD (chronic obstructive pulmonary disease) affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus COPD"]}
+{"id": "Q095", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q096", "question": "What kinds of physical activity should I ask about if I have COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q097", "question": "What complications or related health problems should I ask a clinician about for COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q098", "question": "How often might a clinician recommend follow-up or monitoring for COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q099", "question": "Could my age, family history, pregnancy, or another health condition affect care for COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q100", "question": "What are useful questions to take to my next appointment about COPD (chronic obstructive pulmonary disease)?", "books": ["MedlinePlus COPD"]}
+{"id": "Q101", "question": "What is Arthritis in simple terms?", "books": ["NHS Arthritis"]}
+{"id": "Q102", "question": "What symptoms are commonly linked to Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q103", "question": "Can symptoms linked to Arthritis come and go or change over time?", "books": ["NHS Arthritis"]}
+{"id": "Q104", "question": "What factors can increase a person's chance of developing Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q105", "question": "Are there known triggers or situations that may make Arthritis symptoms worse?", "books": ["NHS Arthritis"]}
+{"id": "Q106", "question": "How do clinicians usually decide whether someone has Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q107", "question": "Which tests or examinations may be used to assess Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q108", "question": "How can I ask my clinician to explain an unclear test result related to Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q109", "question": "What treatment options might a clinician discuss for Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q110", "question": "What information helps a clinician choose a treatment plan for Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q111", "question": "What should I ask about the purpose of medicines used for Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q112", "question": "What side effects or medicine interactions should I ask about if I am treated for Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q113", "question": "If I miss a dose of a medicine related to Arthritis, who should I contact for advice?", "books": ["NHS Arthritis"]}
+{"id": "Q114", "question": "How could Arthritis affect my sleep, work, study, or everyday activities?", "books": ["NHS Arthritis"]}
+{"id": "Q115", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q116", "question": "What kinds of physical activity should I ask about if I have Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q117", "question": "What complications or related health problems should I ask a clinician about for Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q118", "question": "How often might a clinician recommend follow-up or monitoring for Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q119", "question": "Could my age, family history, pregnancy, or another health condition affect care for Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q120", "question": "What are useful questions to take to my next appointment about Arthritis?", "books": ["NHS Arthritis"]}
+{"id": "Q121", "question": "What is Migraine in simple terms?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q122", "question": "What symptoms are commonly linked to Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q123", "question": "Can symptoms linked to Migraine come and go or change over time?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q124", "question": "What factors can increase a person's chance of developing Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q125", "question": "Are there known triggers or situations that may make Migraine symptoms worse?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q126", "question": "How do clinicians usually decide whether someone has Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q127", "question": "Which tests or examinations may be used to assess Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q128", "question": "How can I ask my clinician to explain an unclear test result related to Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q129", "question": "What treatment options might a clinician discuss for Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q130", "question": "What information helps a clinician choose a treatment plan for Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q131", "question": "What should I ask about the purpose of medicines used for Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q132", "question": "What side effects or medicine interactions should I ask about if I am treated for Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q133", "question": "If I miss a dose of a medicine related to Migraine, who should I contact for advice?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q134", "question": "How could Migraine affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q135", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q136", "question": "What kinds of physical activity should I ask about if I have Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q137", "question": "What complications or related health problems should I ask a clinician about for Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q138", "question": "How often might a clinician recommend follow-up or monitoring for Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q139", "question": "Could my age, family history, pregnancy, or another health condition affect care for Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q140", "question": "What are useful questions to take to my next appointment about Migraine?", "books": ["MedlinePlus Migraine"]}
+{"id": "Q141", "question": "What is Depression in simple terms?", "books": ["WHO Depression"]}
+{"id": "Q142", "question": "What symptoms are commonly linked to Depression?", "books": ["WHO Depression"]}
+{"id": "Q143", "question": "Can symptoms linked to Depression come and go or change over time?", "books": ["WHO Depression"]}
+{"id": "Q144", "question": "What factors can increase a person's chance of developing Depression?", "books": ["WHO Depression"]}
+{"id": "Q145", "question": "Are there known triggers or situations that may make Depression symptoms worse?", "books": ["WHO Depression"]}
+{"id": "Q146", "question": "How do clinicians usually decide whether someone has Depression?", "books": ["WHO Depression"]}
+{"id": "Q147", "question": "Which tests or examinations may be used to assess Depression?", "books": ["WHO Depression"]}
+{"id": "Q148", "question": "How can I ask my clinician to explain an unclear test result related to Depression?", "books": ["WHO Depression"]}
+{"id": "Q149", "question": "What treatment options might a clinician discuss for Depression?", "books": ["WHO Depression"]}
+{"id": "Q150", "question": "What information helps a clinician choose a treatment plan for Depression?", "books": ["WHO Depression"]}
+{"id": "Q151", "question": "What should I ask about the purpose of medicines used for Depression?", "books": ["WHO Depression"]}
+{"id": "Q152", "question": "What side effects or medicine interactions should I ask about if I am treated for Depression?", "books": ["WHO Depression"]}
+{"id": "Q153", "question": "If I miss a dose of a medicine related to Depression, who should I contact for advice?", "books": ["WHO Depression"]}
+{"id": "Q154", "question": "How could Depression affect my sleep, work, study, or everyday activities?", "books": ["WHO Depression"]}
+{"id": "Q155", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Depression?", "books": ["WHO Depression"]}
+{"id": "Q156", "question": "What kinds of physical activity should I ask about if I have Depression?", "books": ["WHO Depression"]}
+{"id": "Q157", "question": "What complications or related health problems should I ask a clinician about for Depression?", "books": ["WHO Depression"]}
+{"id": "Q158", "question": "How often might a clinician recommend follow-up or monitoring for Depression?", "books": ["WHO Depression"]}
+{"id": "Q159", "question": "Could my age, family history, pregnancy, or another health condition affect care for Depression?", "books": ["WHO Depression"]}
+{"id": "Q160", "question": "What are useful questions to take to my next appointment about Depression?", "books": ["WHO Depression"]}
+{"id": "Q161", "question": "What is Anxiety disorders in simple terms?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q162", "question": "What symptoms are commonly linked to Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q163", "question": "Can symptoms linked to Anxiety disorders come and go or change over time?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q164", "question": "What factors can increase a person's chance of developing Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q165", "question": "Are there known triggers or situations that may make Anxiety disorders symptoms worse?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q166", "question": "How do clinicians usually decide whether someone has Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q167", "question": "Which tests or examinations may be used to assess Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q168", "question": "How can I ask my clinician to explain an unclear test result related to Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q169", "question": "What treatment options might a clinician discuss for Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q170", "question": "What information helps a clinician choose a treatment plan for Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q171", "question": "What should I ask about the purpose of medicines used for Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q172", "question": "What side effects or medicine interactions should I ask about if I am treated for Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q173", "question": "If I miss a dose of a medicine related to Anxiety disorders, who should I contact for advice?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q174", "question": "How could Anxiety disorders affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q175", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q176", "question": "What kinds of physical activity should I ask about if I have Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q177", "question": "What complications or related health problems should I ask a clinician about for Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q178", "question": "How often might a clinician recommend follow-up or monitoring for Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q179", "question": "Could my age, family history, pregnancy, or another health condition affect care for Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q180", "question": "What are useful questions to take to my next appointment about Anxiety disorders?", "books": ["MedlinePlus Anxiety disorders", "NIMH Anxiety disorders"]}
+{"id": "Q181", "question": "What is Sleep apnea in simple terms?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q182", "question": "What symptoms are commonly linked to Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q183", "question": "Can symptoms linked to Sleep apnea come and go or change over time?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q184", "question": "What factors can increase a person's chance of developing Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q185", "question": "Are there known triggers or situations that may make Sleep apnea symptoms worse?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q186", "question": "How do clinicians usually decide whether someone has Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q187", "question": "Which tests or examinations may be used to assess Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q188", "question": "How can I ask my clinician to explain an unclear test result related to Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q189", "question": "What treatment options might a clinician discuss for Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q190", "question": "What information helps a clinician choose a treatment plan for Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q191", "question": "What should I ask about the purpose of medicines used for Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q192", "question": "What side effects or medicine interactions should I ask about if I am treated for Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q193", "question": "If I miss a dose of a medicine related to Sleep apnea, who should I contact for advice?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q194", "question": "How could Sleep apnea affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q195", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q196", "question": "What kinds of physical activity should I ask about if I have Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q197", "question": "What complications or related health problems should I ask a clinician about for Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q198", "question": "How often might a clinician recommend follow-up or monitoring for Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q199", "question": "Could my age, family history, pregnancy, or another health condition affect care for Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q200", "question": "What are useful questions to take to my next appointment about Sleep apnea?", "books": ["MedlinePlus Sleep apnea"]}
+{"id": "Q201", "question": "What is GERD (acid reflux disease) in simple terms?", "books": ["MedlinePlus GERD"]}
+{"id": "Q202", "question": "What symptoms are commonly linked to GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q203", "question": "Can symptoms linked to GERD (acid reflux disease) come and go or change over time?", "books": ["MedlinePlus GERD"]}
+{"id": "Q204", "question": "What factors can increase a person's chance of developing GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q205", "question": "Are there known triggers or situations that may make GERD (acid reflux disease) symptoms worse?", "books": ["MedlinePlus GERD"]}
+{"id": "Q206", "question": "How do clinicians usually decide whether someone has GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q207", "question": "Which tests or examinations may be used to assess GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q208", "question": "How can I ask my clinician to explain an unclear test result related to GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q209", "question": "What treatment options might a clinician discuss for GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q210", "question": "What information helps a clinician choose a treatment plan for GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q211", "question": "What should I ask about the purpose of medicines used for GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q212", "question": "What side effects or medicine interactions should I ask about if I am treated for GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q213", "question": "If I miss a dose of a medicine related to GERD (acid reflux disease), who should I contact for advice?", "books": ["MedlinePlus GERD"]}
+{"id": "Q214", "question": "How could GERD (acid reflux disease) affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus GERD"]}
+{"id": "Q215", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q216", "question": "What kinds of physical activity should I ask about if I have GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q217", "question": "What complications or related health problems should I ask a clinician about for GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q218", "question": "How often might a clinician recommend follow-up or monitoring for GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q219", "question": "Could my age, family history, pregnancy, or another health condition affect care for GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q220", "question": "What are useful questions to take to my next appointment about GERD (acid reflux disease)?", "books": ["MedlinePlus GERD"]}
+{"id": "Q221", "question": "What is Chronic kidney disease in simple terms?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q222", "question": "What symptoms are commonly linked to Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q223", "question": "Can symptoms linked to Chronic kidney disease come and go or change over time?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q224", "question": "What factors can increase a person's chance of developing Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q225", "question": "Are there known triggers or situations that may make Chronic kidney disease symptoms worse?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q226", "question": "How do clinicians usually decide whether someone has Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q227", "question": "Which tests or examinations may be used to assess Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q228", "question": "How can I ask my clinician to explain an unclear test result related to Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q229", "question": "What treatment options might a clinician discuss for Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q230", "question": "What information helps a clinician choose a treatment plan for Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q231", "question": "What should I ask about the purpose of medicines used for Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q232", "question": "What side effects or medicine interactions should I ask about if I am treated for Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q233", "question": "If I miss a dose of a medicine related to Chronic kidney disease, who should I contact for advice?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q234", "question": "How could Chronic kidney disease affect my sleep, work, study, or everyday activities?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q235", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q236", "question": "What kinds of physical activity should I ask about if I have Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q237", "question": "What complications or related health problems should I ask a clinician about for Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q238", "question": "How often might a clinician recommend follow-up or monitoring for Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q239", "question": "Could my age, family history, pregnancy, or another health condition affect care for Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q240", "question": "What are useful questions to take to my next appointment about Chronic kidney disease?", "books": ["NIDDK Chronic kidney disease"]}
+{"id": "Q241", "question": "What is Urinary tract infection (UTI) in simple terms?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q242", "question": "What symptoms are commonly linked to Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q243", "question": "Can symptoms linked to Urinary tract infection (UTI) come and go or change over time?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q244", "question": "What factors can increase a person's chance of developing Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q245", "question": "Are there known triggers or situations that may make Urinary tract infection (UTI) symptoms worse?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q246", "question": "How do clinicians usually decide whether someone has Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q247", "question": "Which tests or examinations may be used to assess Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q248", "question": "How can I ask my clinician to explain an unclear test result related to Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q249", "question": "What treatment options might a clinician discuss for Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q250", "question": "What information helps a clinician choose a treatment plan for Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q251", "question": "What should I ask about the purpose of medicines used for Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q252", "question": "What side effects or medicine interactions should I ask about if I am treated for Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q253", "question": "If I miss a dose of a medicine related to Urinary tract infection (UTI), who should I contact for advice?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q254", "question": "How could Urinary tract infection (UTI) affect my sleep, work, study, or everyday activities?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q255", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q256", "question": "What kinds of physical activity should I ask about if I have Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q257", "question": "What complications or related health problems should I ask a clinician about for Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q258", "question": "How often might a clinician recommend follow-up or monitoring for Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q259", "question": "Could my age, family history, pregnancy, or another health condition affect care for Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q260", "question": "What are useful questions to take to my next appointment about Urinary tract infection (UTI)?", "books": ["NHS Urinary tract infection"]}
+{"id": "Q261", "question": "What is Anemia in simple terms?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q262", "question": "What symptoms are commonly linked to Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q263", "question": "Can symptoms linked to Anemia come and go or change over time?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q264", "question": "What factors can increase a person's chance of developing Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q265", "question": "Are there known triggers or situations that may make Anemia symptoms worse?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q266", "question": "How do clinicians usually decide whether someone has Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q267", "question": "Which tests or examinations may be used to assess Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q268", "question": "How can I ask my clinician to explain an unclear test result related to Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q269", "question": "What treatment options might a clinician discuss for Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q270", "question": "What information helps a clinician choose a treatment plan for Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q271", "question": "What should I ask about the purpose of medicines used for Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q272", "question": "What side effects or medicine interactions should I ask about if I am treated for Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q273", "question": "If I miss a dose of a medicine related to Anemia, who should I contact for advice?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q274", "question": "How could Anemia affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q275", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q276", "question": "What kinds of physical activity should I ask about if I have Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q277", "question": "What complications or related health problems should I ask a clinician about for Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q278", "question": "How often might a clinician recommend follow-up or monitoring for Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q279", "question": "Could my age, family history, pregnancy, or another health condition affect care for Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q280", "question": "What are useful questions to take to my next appointment about Anemia?", "books": ["MedlinePlus Anemia"]}
+{"id": "Q281", "question": "What is Atopic eczema in simple terms?", "books": ["NHS Atopic eczema"]}
+{"id": "Q282", "question": "What symptoms are commonly linked to Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q283", "question": "Can symptoms linked to Atopic eczema come and go or change over time?", "books": ["NHS Atopic eczema"]}
+{"id": "Q284", "question": "What factors can increase a person's chance of developing Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q285", "question": "Are there known triggers or situations that may make Atopic eczema symptoms worse?", "books": ["NHS Atopic eczema"]}
+{"id": "Q286", "question": "How do clinicians usually decide whether someone has Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q287", "question": "Which tests or examinations may be used to assess Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q288", "question": "How can I ask my clinician to explain an unclear test result related to Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q289", "question": "What treatment options might a clinician discuss for Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q290", "question": "What information helps a clinician choose a treatment plan for Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q291", "question": "What should I ask about the purpose of medicines used for Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q292", "question": "What side effects or medicine interactions should I ask about if I am treated for Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q293", "question": "If I miss a dose of a medicine related to Atopic eczema, who should I contact for advice?", "books": ["NHS Atopic eczema"]}
+{"id": "Q294", "question": "How could Atopic eczema affect my sleep, work, study, or everyday activities?", "books": ["NHS Atopic eczema"]}
+{"id": "Q295", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q296", "question": "What kinds of physical activity should I ask about if I have Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q297", "question": "What complications or related health problems should I ask a clinician about for Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q298", "question": "How often might a clinician recommend follow-up or monitoring for Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q299", "question": "Could my age, family history, pregnancy, or another health condition affect care for Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q300", "question": "What are useful questions to take to my next appointment about Atopic eczema?", "books": ["NHS Atopic eczema"]}
+{"id": "Q381", "question": "What is Obesity in simple terms?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q382", "question": "What symptoms are commonly linked to Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q383", "question": "Can symptoms linked to Obesity come and go or change over time?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q384", "question": "What factors can increase a person's chance of developing Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q385", "question": "Are there known triggers or situations that may make Obesity symptoms worse?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q386", "question": "How do clinicians usually decide whether someone has Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q387", "question": "Which tests or examinations may be used to assess Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q388", "question": "How can I ask my clinician to explain an unclear test result related to Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q389", "question": "What treatment options might a clinician discuss for Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q390", "question": "What information helps a clinician choose a treatment plan for Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q391", "question": "What should I ask about the purpose of medicines used for Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q392", "question": "What side effects or medicine interactions should I ask about if I am treated for Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q393", "question": "If I miss a dose of a medicine related to Obesity, who should I contact for advice?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q394", "question": "How could Obesity affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q395", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q396", "question": "What kinds of physical activity should I ask about if I have Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q397", "question": "What complications or related health problems should I ask a clinician about for Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q398", "question": "How often might a clinician recommend follow-up or monitoring for Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q399", "question": "Could my age, family history, pregnancy, or another health condition affect care for Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q400", "question": "What are useful questions to take to my next appointment about Obesity?", "books": ["MedlinePlus Obesity"]}
+{"id": "Q401", "question": "What is High cholesterol in simple terms?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q402", "question": "What symptoms are commonly linked to High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q403", "question": "Can symptoms linked to High cholesterol come and go or change over time?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q404", "question": "What factors can increase a person's chance of developing High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q405", "question": "Are there known triggers or situations that may make High cholesterol symptoms worse?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q406", "question": "How do clinicians usually decide whether someone has High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q407", "question": "Which tests or examinations may be used to assess High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q408", "question": "How can I ask my clinician to explain an unclear test result related to High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q409", "question": "What treatment options might a clinician discuss for High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q410", "question": "What information helps a clinician choose a treatment plan for High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q411", "question": "What should I ask about the purpose of medicines used for High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q412", "question": "What side effects or medicine interactions should I ask about if I am treated for High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q413", "question": "If I miss a dose of a medicine related to High cholesterol, who should I contact for advice?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q414", "question": "How could High cholesterol affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q415", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q416", "question": "What kinds of physical activity should I ask about if I have High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q417", "question": "What complications or related health problems should I ask a clinician about for High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q418", "question": "How often might a clinician recommend follow-up or monitoring for High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q419", "question": "Could my age, family history, pregnancy, or another health condition affect care for High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q420", "question": "What are useful questions to take to my next appointment about High cholesterol?", "books": ["MedlinePlus High cholesterol"]}
+{"id": "Q421", "question": "What is Underactive thyroid (hypothyroidism) in simple terms?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q422", "question": "What symptoms are commonly linked to Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q423", "question": "Can symptoms linked to Underactive thyroid (hypothyroidism) come and go or change over time?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q424", "question": "What factors can increase a person's chance of developing Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q425", "question": "Are there known triggers or situations that may make Underactive thyroid (hypothyroidism) symptoms worse?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q426", "question": "How do clinicians usually decide whether someone has Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q427", "question": "Which tests or examinations may be used to assess Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q428", "question": "How can I ask my clinician to explain an unclear test result related to Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q429", "question": "What treatment options might a clinician discuss for Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q430", "question": "What information helps a clinician choose a treatment plan for Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q431", "question": "What should I ask about the purpose of medicines used for Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q432", "question": "What side effects or medicine interactions should I ask about if I am treated for Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q433", "question": "If I miss a dose of a medicine related to Underactive thyroid (hypothyroidism), who should I contact for advice?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q434", "question": "How could Underactive thyroid (hypothyroidism) affect my sleep, work, study, or everyday activities?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q435", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q436", "question": "What kinds of physical activity should I ask about if I have Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q437", "question": "What complications or related health problems should I ask a clinician about for Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q438", "question": "How often might a clinician recommend follow-up or monitoring for Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q439", "question": "Could my age, family history, pregnancy, or another health condition affect care for Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q440", "question": "What are useful questions to take to my next appointment about Underactive thyroid (hypothyroidism)?", "books": ["NHS Underactive thyroid"]}
+{"id": "Q441", "question": "What is Back pain in simple terms?", "books": ["NHS Back pain"]}
+{"id": "Q442", "question": "What symptoms are commonly linked to Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q443", "question": "Can symptoms linked to Back pain come and go or change over time?", "books": ["NHS Back pain"]}
+{"id": "Q444", "question": "What factors can increase a person's chance of developing Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q445", "question": "Are there known triggers or situations that may make Back pain symptoms worse?", "books": ["NHS Back pain"]}
+{"id": "Q446", "question": "How do clinicians usually decide whether someone has Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q447", "question": "Which tests or examinations may be used to assess Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q448", "question": "How can I ask my clinician to explain an unclear test result related to Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q449", "question": "What treatment options might a clinician discuss for Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q450", "question": "What information helps a clinician choose a treatment plan for Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q451", "question": "What should I ask about the purpose of medicines used for Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q452", "question": "What side effects or medicine interactions should I ask about if I am treated for Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q453", "question": "If I miss a dose of a medicine related to Back pain, who should I contact for advice?", "books": ["NHS Back pain"]}
+{"id": "Q454", "question": "How could Back pain affect my sleep, work, study, or everyday activities?", "books": ["NHS Back pain"]}
+{"id": "Q455", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q456", "question": "What kinds of physical activity should I ask about if I have Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q457", "question": "What complications or related health problems should I ask a clinician about for Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q458", "question": "How often might a clinician recommend follow-up or monitoring for Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q459", "question": "Could my age, family history, pregnancy, or another health condition affect care for Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q460", "question": "What are useful questions to take to my next appointment about Back pain?", "books": ["NHS Back pain"]}
+{"id": "Q461", "question": "What is Hay fever (seasonal allergies) in simple terms?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q462", "question": "What symptoms are commonly linked to Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q463", "question": "Can symptoms linked to Hay fever (seasonal allergies) come and go or change over time?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q464", "question": "What factors can increase a person's chance of developing Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q465", "question": "Are there known triggers or situations that may make Hay fever (seasonal allergies) symptoms worse?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q466", "question": "How do clinicians usually decide whether someone has Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q467", "question": "Which tests or examinations may be used to assess Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q468", "question": "How can I ask my clinician to explain an unclear test result related to Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q469", "question": "What treatment options might a clinician discuss for Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q470", "question": "What information helps a clinician choose a treatment plan for Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q471", "question": "What should I ask about the purpose of medicines used for Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q472", "question": "What side effects or medicine interactions should I ask about if I am treated for Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q473", "question": "If I miss a dose of a medicine related to Hay fever (seasonal allergies), who should I contact for advice?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q474", "question": "How could Hay fever (seasonal allergies) affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q475", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q476", "question": "What kinds of physical activity should I ask about if I have Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q477", "question": "What complications or related health problems should I ask a clinician about for Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q478", "question": "How often might a clinician recommend follow-up or monitoring for Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q479", "question": "Could my age, family history, pregnancy, or another health condition affect care for Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q480", "question": "What are useful questions to take to my next appointment about Hay fever (seasonal allergies)?", "books": ["MedlinePlus Hay fever"]}
+{"id": "Q481", "question": "What is Osteoporosis in simple terms?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q482", "question": "What symptoms are commonly linked to Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q483", "question": "Can symptoms linked to Osteoporosis come and go or change over time?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q484", "question": "What factors can increase a person's chance of developing Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q485", "question": "Are there known triggers or situations that may make Osteoporosis symptoms worse?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q486", "question": "How do clinicians usually decide whether someone has Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q487", "question": "Which tests or examinations may be used to assess Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q488", "question": "How can I ask my clinician to explain an unclear test result related to Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q489", "question": "What treatment options might a clinician discuss for Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q490", "question": "What information helps a clinician choose a treatment plan for Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q491", "question": "What should I ask about the purpose of medicines used for Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q492", "question": "What side effects or medicine interactions should I ask about if I am treated for Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q493", "question": "If I miss a dose of a medicine related to Osteoporosis, who should I contact for advice?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q494", "question": "How could Osteoporosis affect my sleep, work, study, or everyday activities?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q495", "question": "What questions about food, drink, or lifestyle should I discuss with my clinician about Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q496", "question": "What kinds of physical activity should I ask about if I have Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q497", "question": "What complications or related health problems should I ask a clinician about for Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q498", "question": "How often might a clinician recommend follow-up or monitoring for Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q499", "question": "Could my age, family history, pregnancy, or another health condition affect care for Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}
+{"id": "Q500", "question": "What are useful questions to take to my next appointment about Osteoporosis?", "books": ["MedlinePlus Osteoporosis"]}

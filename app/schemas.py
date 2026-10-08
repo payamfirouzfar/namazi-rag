@@ -6,7 +6,8 @@ MAX_QUESTION_CHARS = 2000
 
 DISCLAIMER = (
     "Reference information from textbooks, not a diagnosis. "
-    "A clinician must verify it before any decision about a patient."
+    "A clinician must verify it before any decision about a patient. "
+    "In an emergency call your local emergency number."
 )
 
 
