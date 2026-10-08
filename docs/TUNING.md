@@ -17,7 +17,8 @@ tuning script on the real library (see the bottom).
 | `MIN_DENSE_SCORE` | 0 (off) | If even the best chunk is less similar than this, skip the LLM and say "not found". Depends on the embedding model, so it must be calibrated. | medical-rag-qa: explicit `NO_ANSWER` behaviour. |
 | `MAX_CONTEXT_CHARS` | 12000 | Hard cap on the text sent to the LLM. Lower it for a small-context local model. | MedRAG cut the context to the model's limit. |
 | `LLM_TEMPERATURE` | 0 | 0 gives the same answer to the same question, which is what you want here. | MedRAG: 0. |
-| `EMBEDDING_MODEL` | `intfloat/multilingual-e5-base` | The biggest quality lever. Needs a re-ingest. | See the list below. |
+| `EMBEDDING_MODEL` | `BAAI/bge-m3` | The biggest quality lever. Needs a re-ingest. | See the list below. |
+| `RERANK_MODEL` / `RERANK_POOL` | `BAAI/bge-reranker-v2-m3` / 20 | A second model re-orders the best 20 chunks and the top 5 go to the LLM. Costs about 0.6 s per question, empty = off. | Not in the reference projects, but it was the second biggest gain here. |
 
 ## Embedding models to compare
 
@@ -26,14 +27,14 @@ needs them) and compare the test numbers.
 
 | Model | Prefixes | Notes |
 |---|---|---|
-| `intfloat/multilingual-e5-base` (default) | `query: ` / `passage: ` | Good balance, handles Persian. |
-| `intfloat/multilingual-e5-large` | `query: ` / `passage: ` | Better and slower. |
-| `BAAI/bge-m3` | none | Strong multilingual, larger. |
+| `BAAI/bge-m3` (default) | none | Best of the three on my questions: right passage in the top 5 for 90% of the English and 61% of the Persian questions (typed, no translation). |
+| `intfloat/multilingual-e5-base` | `query: ` / `passage: ` | 85% English, 31% Persian typed. The first default. |
+| `intfloat/multilingual-e5-large` | `query: ` / `passage: ` | 79% English, 55% Persian typed: better for Persian, worse for English. |
 | `paraphrase-multilingual-MiniLM-L12-v2` | none | Small and fast. Used by DoctorRAG. |
 | `pritamdeka/S-PubMedBert-MS-MARCO` | none | English biomedical only. Used by medical-rag-qa. |
 
-I could not download any of these in my build environment, so none has been run on real data
-yet. MedCPT (used by MedRAG) needs two different encoders for questions and passages, which this
+The first three were run on the 107 answerable staff questions (hybrid 2:1, 250-word chunks, no reranker, see the README).
+The others were not tried. MedCPT (used by MedRAG) needs two different encoders for questions and passages, which this
 code does not support, to keep it simple.
 
 ## Lessons from the reference projects

@@ -15,7 +15,7 @@ from pathlib import Path
 
 from app.config import get_settings
 from app.main import build_rag
-from app.rag import SYSTEM_PROMPT, USER_TEMPLATE, build_context, has_persian
+from app.rag import SYSTEM_PROMPT, build_context, has_persian, user_message
 from scripts.tune import load_eval
 
 
@@ -55,11 +55,11 @@ def time_steps(rag, question: str) -> dict:
     t = lap(steps, "dense search", t)
     retriever.index.bm25_scores(english)
     t = lap(steps, "BM25 search", t)
-    hits = retriever.search(english)  # the whole search again, the part that is left is the merge
-    t = lap(steps, "merge", t)
-    steps["merge"] = max(0.0, steps["merge"] - steps["embed question"] - steps["dense search"] - steps["BM25 search"])
+    hits = retriever.search(english)  # the whole search again, what is left is the merge and the reranker
+    t = lap(steps, "merge + rerank", t)
+    steps["merge + rerank"] = max(0.0, steps["merge + rerank"] - steps["embed question"] - steps["dense search"] - steps["BM25 search"])
     context, _ = build_context(hits, rag.max_context_chars)
-    user = USER_TEMPLATE.format(context=context, question=question)
+    user = user_message(context, question)
     t = lap(steps, "build prompt", t)
     split = ollama_split(rag.llm, SYSTEM_PROMPT, user)
     if split:

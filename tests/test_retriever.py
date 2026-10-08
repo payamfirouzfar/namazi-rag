@@ -72,3 +72,32 @@ def test_search_quality_does_not_drop_on_the_sample_questions(index):
     assert result["n"] >= 10
     assert result["hit_rate"] >= 0.9
     assert result["mrr"] >= 0.8
+
+
+class FavoriteReranker:
+    """Gives the highest score to the chunks that contain a word, like a real reranker would for the best match."""
+
+    def __init__(self, word):
+        self.word = word
+        self.looked_at = 0
+
+    def predict(self, pairs, batch_size=16):
+        self.looked_at = len(pairs)
+        return [1.0 if self.word in text.lower() else 0.0 for _, text in pairs]
+
+
+def test_reranker_puts_its_favorite_chunk_first(index):
+    plain = HybridRetriever(index, HashEmbedder(), RetrievalParams(top_k=3)).search("blood pressure treatment")
+    word = next(w for w in ("diabetes", "warfarin", "thiazide") if w not in plain[0].chunk.text.lower())
+    reranker = FavoriteReranker(word)
+    hits = HybridRetriever(index, HashEmbedder(), RetrievalParams(top_k=3, rerank_pool=10), reranker).search("blood pressure treatment")
+    assert len(hits) == 3
+    assert word in hits[0].chunk.text.lower()  # moved to the top
+    assert reranker.looked_at > 3  # it looked at more chunks than it returns
+
+
+def test_no_reranker_by_default():
+    from app.embedder import make_reranker
+    from tests.conftest import make_settings
+
+    assert make_reranker(make_settings()) is None

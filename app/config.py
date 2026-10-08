@@ -23,15 +23,17 @@ class Settings(BaseSettings):
 
     # embeddings. multilingual-e5 handles Persian questions against English books.
     # Use "hash" only for tests / offline development.
-    embedding_model: str = "intfloat/multilingual-e5-base"
-    query_prefix: str = "query: "
-    passage_prefix: str = "passage: "
+    embedding_model: str = "BAAI/bge-m3"  # on the staff questions it beat multilingual-e5-base and -large
+    query_prefix: str = ""  # bge-m3 needs no prefixes. e5 models need "query: " and "passage: "
+    passage_prefix: str = ""
     embedding_batch_size: int = 32
 
     # retrieval
     top_k: int = 5
     oversample: int = 3  # candidates per retriever = top_k * oversample
     rrf_k: int = 60
+    rerank_model: str = "BAAI/bge-reranker-v2-m3"  # puts the best chunks in a better order. Empty = off
+    rerank_pool: int = 20  # how many chunks the reranker looks at
     weight_dense: float = 1.0
     weight_bm25: float = 1.0
     bm25_k1: float = 1.2

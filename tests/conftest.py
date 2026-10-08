@@ -38,6 +38,7 @@ def make_settings(**overrides) -> Settings:
         api_keys="",
         db_path=":memory:",
         embedding_model="hash",
+        rerank_model="",  # the real model is a big download, tests use a fake one
         rate_limit_per_minute=1000,
     )
     values.update(overrides)

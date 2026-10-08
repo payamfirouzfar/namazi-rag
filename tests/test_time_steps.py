@@ -1,6 +1,6 @@
 from scripts.time_steps import time_steps
 
-STEPS = {"translate", "embed question", "dense search", "BM25 search", "merge", "build prompt", "LLM answer"}
+STEPS = {"translate", "embed question", "dense search", "BM25 search", "merge + rerank", "build prompt", "LLM answer"}
 
 
 def test_every_step_is_timed(rag):

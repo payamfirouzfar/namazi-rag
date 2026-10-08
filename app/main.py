@@ -11,7 +11,7 @@ from fastapi.responses import FileResponse, JSONResponse, PlainTextResponse
 
 from app.config import Settings, get_settings
 from app.db import Database
-from app.embedder import make_embedder
+from app.embedder import make_embedder, make_reranker
 from app.index import Index, IndexLoadError
 from app.llm import LLMError, OpenAICompatibleLLM
 from app.metrics import Metrics
@@ -32,7 +32,7 @@ def build_rag(s: Settings) -> RagService:
     embedder = make_embedder(s)
     index = Index.load(s.index_dir, embedder.name, s.bm25_k1, s.bm25_b)
     log.info("index ready: %d chunks from %d books", len(index), len(index.meta.get("books", [])))
-    retriever = HybridRetriever(index, embedder, RetrievalParams.from_settings(s))
+    retriever = HybridRetriever(index, embedder, RetrievalParams.from_settings(s), make_reranker(s))
     return RagService(retriever, OpenAICompatibleLLM(s), s.max_context_chars, s.min_dense_score)
 
 

@@ -16,11 +16,11 @@ import time
 from pathlib import Path
 
 from app.config import get_settings
-from app.embedder import make_embedder
+from app.embedder import make_embedder, make_reranker
 from app.index import Index
 from app.llm import LLMError, OpenAICompatibleLLM
 from app.logger import setup_logging
-from app.rag import USER_TEMPLATE, RagService, build_context, has_persian
+from app.rag import RagService, build_context, has_persian, user_message
 from app.retriever import HybridRetriever, RetrievalParams
 from scripts.tune import load_eval, norm
 
@@ -52,7 +52,7 @@ def made_up_numbers(answer: str, sources) -> int:
 
 def judge_supported(llm, question: str, answer: str, sources, max_chars: int) -> bool:
     context, _ = build_context(sources, max_chars)
-    reply = llm.complete(JUDGE_PROMPT, USER_TEMPLATE.format(context=context, question=question) + f"\n\nANSWER:\n{answer}")
+    reply = llm.complete(JUDGE_PROMPT, user_message(context, question) + f"\n\nANSWER:\n{answer}")
     return reply.text.strip().upper().startswith("SUPPORTED")
 
 
@@ -66,7 +66,7 @@ def main() -> int:
 
     setup_logging("WARNING")
     index = Index.load(s.index_dir, s.embedding_model, s.bm25_k1, s.bm25_b)
-    retriever = HybridRetriever(index, make_embedder(s), RetrievalParams.from_settings(s))
+    retriever = HybridRetriever(index, make_embedder(s), RetrievalParams.from_settings(s), make_reranker(s))
     llm = OpenAICompatibleLLM(s)
     rag = RagService(retriever, llm, s.max_context_chars, s.min_dense_score)
     items = load_eval(args.eval)

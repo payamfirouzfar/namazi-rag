@@ -65,6 +65,15 @@ class HashEmbedder:
         return self._vector(text)
 
 
+def make_reranker(settings: Settings):
+    """A second model that puts the best chunks in a better order. None means off."""
+    if not settings.rerank_model:
+        return None
+    from sentence_transformers import CrossEncoder  # slow import, so do it here
+
+    return CrossEncoder(settings.rerank_model, max_length=512)
+
+
 def make_embedder(settings: Settings):
     if settings.embedding_model == "hash":
         log.warning("using the hash embedder - fine for tests, not for real use")

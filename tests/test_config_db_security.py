@@ -79,4 +79,5 @@ def test_env_example_parses_cleanly():
 
     s = Settings(_env_file=str(Path(__file__).resolve().parent.parent / ".env.example"))
     assert s.api_keys == "" and s.llm_base_url is None and s.cors_origins == ""
-    assert s.query_prefix == "query: "
+    assert s.embedding_model == "BAAI/bge-m3" and s.query_prefix == "" and s.passage_prefix == ""
+    assert s.rerank_model == "BAAI/bge-reranker-v2-m3"

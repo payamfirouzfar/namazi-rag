@@ -12,8 +12,8 @@ server inside the hospital network, and no question leaves it.
 Docker Hub and Hugging Face can be slow or blocked, so download once and copy by USB or the internal network.
 1. Docker images: `docker pull python:3.11-slim ollama/ollama`, then `docker save -o images.tar ...` and `docker load -i images.tar` on the server.
 2. The language model: run `ollama pull qwen2.5:7b-instruct` and copy the Ollama models folder to the server.
-3. The embedding model: download `intfloat/multilingual-e5-base` and copy the folder to the server.
-   In `.env` set `EMBEDDING_MODEL` to that folder path (the index remembers the name, so use the same one for ingest and for the API).
+3. The embedding model and the reranker: download `BAAI/bge-m3` and `BAAI/bge-reranker-v2-m3` (about 2 GB each) and copy the folders to the server.
+   In `.env` set `EMBEDDING_MODEL` and `RERANK_MODEL` to those folder paths (the index remembers the name of the embedding model, so use the same one for ingest and for the API).
 
 ## Step 2: settings
 Copy `.env.example` to `.env` and set:

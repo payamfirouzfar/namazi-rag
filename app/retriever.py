@@ -16,10 +16,11 @@ class RetrievalParams:
     rrf_k: int = 60
     weight_dense: float = 1.0
     weight_bm25: float = 1.0
+    rerank_pool: int = 20
 
     @classmethod
     def from_settings(cls, s: Settings) -> "RetrievalParams":
-        return cls(s.top_k, s.oversample, s.rrf_k, s.weight_dense, s.weight_bm25)
+        return cls(s.top_k, s.oversample, s.rrf_k, s.weight_dense, s.weight_bm25, s.rerank_pool)
 
 
 @dataclass
@@ -47,10 +48,11 @@ def _top_n(scores: np.ndarray, n: int) -> list[int]:
 
 
 class HybridRetriever:
-    def __init__(self, index: Index, embedder, params: RetrievalParams):
+    def __init__(self, index: Index, embedder, params: RetrievalParams, reranker=None):
         self.index = index
         self.embedder = embedder
         self.params = params
+        self.reranker = reranker  # a CrossEncoder, or None to keep the merged order
 
     def search(self, query: str, top_k: int | None = None) -> list[Hit]:
         p = self.params
@@ -71,5 +73,10 @@ class HybridRetriever:
             rankings.append(ranked)
             weights.append(p.weight_bm25)
 
-        fused = rrf_fuse(rankings, weights, p.rrf_k)[:top_k]
-        return [Hit(self.index.chunks[i], score, float(dense[i])) for i, score in fused]
+        fused = rrf_fuse(rankings, weights, p.rrf_k)[: p.rerank_pool if self.reranker else top_k]
+        hits = [Hit(self.index.chunks[i], score, float(dense[i])) for i, score in fused]
+        return self.rerank(query, hits)[:top_k] if self.reranker else hits
+
+    def rerank(self, query: str, hits: list[Hit]) -> list[Hit]:
+        scores = self.reranker.predict([(query, h.chunk.text) for h in hits], batch_size=16)
+        return [h for _, h in sorted(zip(scores, hits), key=lambda pair: -pair[0])]

@@ -1,6 +1,6 @@
 from app.llm import LLMError, LLMResult
 from app.rag import (NO_ANSWER, NOT_FOUND_MESSAGE, TRANSLATE_PROMPT, URGENT_MESSAGE, RagService, build_context,
-                     has_persian, looks_urgent)
+                     has_persian, looks_urgent, user_message)
 from app.retriever import Hit
 from app.chunking import Chunk
 
@@ -151,3 +151,8 @@ def test_a_persian_answer_with_broken_letters_is_not_shown(rag, llm):
     result = rag.ask("هدف INR برای وارفارین چیست؟")
     assert not result.answered
     assert result.answer == NOT_FOUND_MESSAGE
+
+
+def test_the_message_tells_the_model_which_language_to_answer_in():
+    assert user_message("some sources", "What is INR?").endswith("Write the answer in English.")
+    assert user_message("some sources", "INR چیست؟").endswith("Write the answer in Persian.")
