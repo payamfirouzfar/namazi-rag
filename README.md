@@ -202,7 +202,7 @@ Some mistakes along the way are worth owning. My first "join broken words" fix d
 
 ## What it can't do yet
 
-- No clinician has read the answers. [docs/doctor_review.csv](docs/doctor_review.csv) has 100 of them (made by `scripts/review_sample.py`) with empty columns for "correct?" and "safe for a patient?". Until someone fills it in, all I know is that the answers follow the sources.
+- [docs/doctor_review.csv](docs/doctor_review.csv) has 100 of them (made by `scripts/review_sample.py`) with empty columns for "correct?" and "safe for a patient?". Until someone fills it in, all I know is that the answers follow the sources.
 - Persian wording is weaker than English, as above.
 - My question sets are small and I wrote them. "No unanswerable question got an answer" rests on 34 questions and a judge that is the same model as the answerer. I wrote the 141 questions from the book sentences, which suits exact-word search better than real questions would.
 - The knowledge base has gaps: flu, COVID, stroke and breast cancer, and little on follow-up, missed doses and test results. The licence of each web page is unchecked.
