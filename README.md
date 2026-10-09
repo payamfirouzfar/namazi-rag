@@ -133,6 +133,16 @@ For an English answer, reading the 5 chunks takes about 1.65 s (49%), writing th
 
 The first question after a quiet period is slower: 12 s in my last check, because Ollama had unloaded the model and had to load it again. Setting `OLLAMA_KEEP_ALIVE` keeps it in memory, at the price of holding the GPU memory.
 
+If I had to speed it up, this is the order I'd go in, biggest first. I haven't tried these yet, except where noted:
+
+1. A faster way to run the LLM (llama.cpp server, vLLM or SGLang). Reading and writing are 82% of an answer, and this is also what limits many users.
+2. Shorter chunks. The tuner likes 150 words, which would cut the prompt, and with the reranker the search found the right passage about as often (0.90 against 0.91 for English). I tested the search only, not the answers.
+3. A smaller reranker, or looking at 10 chunks instead of 20, which should roughly halve its 0.6 s.
+4. An answer cache for questions that come back again and again.
+5. `OLLAMA_KEEP_ALIVE`, so nobody pays the 12 s cold start (tested: the cold start is real).
+
+Already done: the short-answer prompt cut the answer length by about 10%, and the reranker's 0.6 s is paid back by a much better search.
+
 Cost for 10,000 questions on a paid API, using 2,146 prompt and 52 answer tokens per question (prices from summary sites on 2026-10-08, sources in [docs/api_prices.csv](docs/api_prices.csv), please check the official pages):
 
 | Model | 1,000 questions | 10,000 questions |
