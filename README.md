@@ -4,7 +4,7 @@
 
 Ask a medical question in English or Persian and get a short answer with book and page citations. The app searches 20 public guidelines (WHO, KDIGO, GOLD), gives the best passages to a local LLM, and the LLM may only use those passages. When the books don't have the answer, it says "I don't know" and stops there.
 
-I built it for a hospital setting where questions can't leave the network, so the LLM runs on a GPU inside that network, through Ollama. Below you'll find what it does, why it's built this way, what I measured, and what it still can't do.
+The LLM runs locally through Ollama, so a question never leaves the machine. Below you'll find what it does, why it's built this way, what I measured, and what it still can't do.
 
 **Contents:** [Examples](#examples) · [How it works](#how-it-works) · [Why these choices](#why-these-choices) · [Results](#results) · [Speed, latency and cost](#speed-latency-and-cost) · [Many users and Grafana](#many-users-and-grafana) · [Experiments](#experiments) · [What it can't do yet](#what-it-cant-do-yet) · [FAQ](#faq) · [Run it](#run-it) · [Layout](#project-layout)
 
@@ -207,21 +207,19 @@ Some mistakes along the way are worth owning. My first "join broken words" fix d
 - My question sets are small and I wrote them. "No unanswerable question got an answer" rests on 34 questions and a judge that is the same model as the answerer. I wrote the 141 questions from the book sentences, which suits exact-word search better than real questions would.
 - The knowledge base has gaps: flu, COVID, stroke and breast cancer, and little on follow-up, missed doses and test results. The licence of each web page is unchecked.
 - One GPU, about 0.4 answers per second.
-- No HTTPS (nginx notes are in [docs/DEPLOY.md](docs/DEPLOY.md), untested), no user accounts (only API keys), no privacy policy for patient questions. Health software can fall under medical-device rules, so ask someone who knows your country's.
-- Docker files are included, but the Docker service wasn't running on my test server, so I never ran them.
 - Answers are reference text from books, not medical advice.
 
 | | Built | Not yet | Not planned |
 |---|---|---|---|
 | Search | hybrid search, reranker, Persian questions | Persian source pages, searching with both the typed and translated question | |
 | Answers | citations, "I don't know", emergency line | streaming, an answer cache, a second check that the answer matches the question | diagnosis or treatment advice beyond the books |
-| Running it | metrics, alerts, load test, CI, backups, systemd | HTTPS, accounts, vLLM or another faster server | |
+| Speed and checks | metrics, alerts, load test, CI | vLLM or another faster model server | |
 
 ## FAQ
 
 **Why not just ask ChatGPT?** Questions would leave the network, and a general model answers even when it doesn't know. This app can only use the books and says so when they don't have the answer.
 
-**Why Ollama and not vLLM?** Ollama was simple to set up on a shared server with little free disk. vLLM would serve many users at once much better, but it needs the original model weights (far more disk) and a matching CUDA setup. It's the next thing I'd try.
+**Why Ollama and not vLLM?** Ollama was the simplest to set up, and its 4-bit model files are small (19 GB for the 32B model). vLLM would serve many users at once much better, but it needs the original model weights (far more disk) and a matching CUDA setup. It's the next thing I'd try.
 
 **Can I use another LLM?** Yes. Any OpenAI-compatible server works: set `LLM_BASE_URL` and `LLM_MODEL` in `.env`. Check how it refuses with `scripts/check_answers.py` first, because that's where models differ most.
 
@@ -250,7 +248,7 @@ python -m scripts.tune          # find good settings on your own questions
 uvicorn app.main:app_factory --factory --host 127.0.0.1 --port 8000
 ```
 
-`walkthrough.ipynb` runs every step with its results and plots (the saved outputs are already in it). Setup on a server, backups, systemd services, Prometheus, Grafana and nginx are in [docs/DEPLOY.md](docs/DEPLOY.md).
+`walkthrough.ipynb` runs every step with its results and plots (the saved outputs are already in it). Settings, backups, Prometheus, Grafana and the other commands are in [docs/SETUP.md](docs/SETUP.md).
 
 ```bash
 curl -X POST localhost:8000/v1/ask \
@@ -280,5 +278,5 @@ experiments/  one script per experiment, results/, and a write-up
 tests/        128 tests, no downloads and no network
 walkthrough.ipynb   everything above, step by step, with plots
 data/         books/ · sample/ · eval/ (questions) · index/ (generated)
-docs/         BOOKS.md · TUNING.md · DEPLOY.md · the saved results (csv, png) · prometheus.yml · alerts.yml · grafana_dashboard.json
+docs/         BOOKS.md · TUNING.md · SETUP.md · the saved results (csv, png) · prometheus.yml · alerts.yml · grafana_dashboard.json
 ```

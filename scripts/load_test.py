@@ -4,7 +4,7 @@
 
 Every "user" asks one question taken from the eval file. At the end you get the speed,
 the answer times and the number of failures. Use a test copy of the app (rate limit off,
-its own database), see docs/DEPLOY.md.
+its own database), see docs/SETUP.md.
 """
 import argparse
 import asyncio
