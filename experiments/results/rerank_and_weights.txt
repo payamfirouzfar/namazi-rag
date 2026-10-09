@@ -1,0 +1,6 @@
+bge-m3 weights 1:1                   7112 chunks | English: hit@5 0.879 MRR 0.661 | Persian typed: hit@5 0.571 MRR 0.459 | Persian translated: hit@5 0.837 MRR 0.664
+bge-m3 weights 2:1                   7112 chunks | English: hit@5 0.897 MRR 0.639 | Persian typed: hit@5 0.612 MRR 0.480 | Persian translated: hit@5 0.816 MRR 0.680
+bge-m3 weights 3:1                   7112 chunks | English: hit@5 0.914 MRR 0.643 | Persian typed: hit@5 0.612 MRR 0.484 | Persian translated: hit@5 0.837 MRR 0.668
+bge-m3 weights 1:0                   7112 chunks | English: hit@5 0.810 MRR 0.596 | Persian typed: hit@5 0.633 MRR 0.520 | Persian translated: hit@5 0.755 MRR 0.599
+bge-m3 + reranker (20 -> 5)          7112 chunks | English: hit@5 0.914 MRR 0.800 | Persian typed: hit@5 0.837 MRR 0.727 | Persian translated: hit@5 0.878 MRR 0.759
+the reranker needed 125 seconds for all the questions

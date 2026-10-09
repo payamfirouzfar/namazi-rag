@@ -1,0 +1,6 @@
+150/30 no reranker                  11891 chunks | English: hit@5 0.879 MRR 0.667 | Persian typed: hit@5 0.592 MRR 0.416 | Persian translated: hit@5 0.755 MRR 0.605
+150/30 + reranker                   11891 chunks | English: hit@5 0.897 MRR 0.797 | Persian typed: hit@5 0.816 MRR 0.704 | Persian translated: hit@5 0.837 MRR 0.693
+200/40 no reranker                   8913 chunks | English: hit@5 0.862 MRR 0.693 | Persian typed: hit@5 0.633 MRR 0.430 | Persian translated: hit@5 0.755 MRR 0.625
+200/40 + reranker                    8913 chunks | English: hit@5 0.966 MRR 0.818 | Persian typed: hit@5 0.837 MRR 0.740 | Persian translated: hit@5 0.898 MRR 0.736
+250/50 no reranker                   7112 chunks | English: hit@5 0.897 MRR 0.639 | Persian typed: hit@5 0.612 MRR 0.480 | Persian translated: hit@5 0.816 MRR 0.680
+250/50 + reranker                    7112 chunks | English: hit@5 0.914 MRR 0.800 | Persian typed: hit@5 0.837 MRR 0.727 | Persian translated: hit@5 0.878 MRR 0.759

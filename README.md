@@ -236,17 +236,17 @@ We tried each idea on the same questions and kept only what helped.
 | embedding model multilingual-e5-large | 0.79 / 0.55: worse for English | no |
 | **embedding model bge-m3** | **0.90 / 0.61**, MRR also better | **yes** |
 | dense:BM25 weight 1:1, 2:1, 3:1 with bge-m3 | all within a few points | 2:1 |
-| **reranker (bge-reranker-v2-m3, best 20 chunks)** | **0.93 / 0.84**, MRR 0.82 / 0.73 | **yes** |
+| **reranker (bge-reranker-v2-m3, best 20 chunks)** | **0.91 / 0.84**, MRR 0.80 / 0.73 | **yes** |
 | chunks of 150, 200 or 250 words, with the reranker | all within noise | 250 |
 | remove repeated page headers / join words the PDF broke / book title in every chunk | no clear gain | no |
 | a bigger LLM (3B to 32B) | right passage cited 13 to 16 of 21 on the first 27 questions | yes |
-| **prompt: "start with the direct answer, 2 to 4 short sentences, simple words"** | same quality, answers about 27% shorter | **yes** |
+| **prompt: "start with the direct answer, 2 to 4 short sentences, simple words"** | same quality, answers about 10% shorter (English 11%, Persian not shorter) | **yes** |
 | prompt that answers part of a question and says what is missing | right page cited less often (86 against 92 of 107) | no |
 | a line "write the answer in Persian/English" at the end of the message | needed by other models; Qwen already did it | yes |
 | Gemma 3 12B instead of Qwen 32B | 1.4 times faster, same Persian citations, but it made up 3 of 18 English unanswerable answers | no |
 | a similarity cutoff (`MIN_DENSE_SCORE`) | answerable and unanswerable questions overlap (0.44 to 0.81 against 0.45 to 0.61) | no |
 
-The tuner (`python -m scripts.tune`, 33 settings, table in [docs/tuning_results.csv](docs/tuning_results.csv)) prefers 150-word chunks without the reranker, but with the reranker the sizes are within noise, so we kept 250. Every setting is explained in [docs/TUNING.md](docs/TUNING.md).
+The tuner (`python -m scripts.tune`, 33 settings, table in [docs/tuning_results.csv](docs/tuning_results.csv)) prefers 150-word chunks without the reranker, but with the reranker the sizes are within noise, so we kept 250. Every setting is explained in [docs/TUNING.md](docs/TUNING.md). The scripts and the saved results of these experiments are in [experiments/](experiments/README.md).
 
 Problems the tests found, and what we did:
 - **"NO_ANSWER" shown to the user.** In 10 English answers the model explained first and wrote the word at the end, and the app only looked at the start of the reply. Now a reply that contains it anywhere becomes "I don't know" (with a test).
@@ -284,6 +284,7 @@ scripts/    ingest.py (build the index) · tune.py (find good settings)
             load_test.py (many users at once) · fake_llm.py (a fake model for load tests)
             time_steps.py (time every step of an answer) · fetch_sources.py (download the pages for the patient questions)
             review_sample.py (a sheet for doctors)
+experiments/ the search, prompt and LLM experiments: scripts, results and a plain write-up (README.md)
 tests/      pytest suite (no downloads, no network)
 walkthrough.ipynb   step by step run of everything with the results
 data/       books/ · sample/ · eval/ (questions) · index/ (generated)

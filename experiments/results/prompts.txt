@@ -1,0 +1,38 @@
+
+All questions
+                                        base  short  partial   both
+answerable questions                   107.0  107.0    107.0  107.0
+...got an answer                       100.0  100.0     95.0   97.0
+...right passage in the sources        101.0  101.0    101.0  101.0
+...right passage cited                  92.0   92.0     86.0   88.0
+unanswerable questions                  34.0   34.0     34.0   34.0
+...still got an answer                   1.0    1.0      1.0    0.0
+answers with a number in no source       0.0    0.0      0.0    0.0
+median answer tokens                    58.0   52.0     63.0   57.0
+median seconds                          10.8   10.5     10.3   10.8
+Persian questions answered in English    0.0    0.0      0.0    0.0
+
+English questions
+                                    base  short  partial  both
+answerable questions                58.0   58.0     58.0  58.0
+...got an answer                    57.0   58.0     57.0  57.0
+...right passage in the sources     56.0   56.0     56.0  56.0
+...right passage cited              53.0   53.0     53.0  52.0
+unanswerable questions              18.0   18.0     18.0  18.0
+...still got an answer               0.0    0.0      0.0   0.0
+answers with a number in no source   0.0    0.0      0.0   0.0
+median answer tokens                47.0   42.0     50.0  45.0
+median seconds                      10.1   10.3     10.2  10.6
+
+Persian questions
+                                       base  short  partial  both
+answerable questions                   49.0   49.0     49.0  49.0
+...got an answer                       43.0   42.0     38.0  40.0
+...right passage in the sources        45.0   45.0     45.0  45.0
+...right passage cited                 39.0   39.0     33.0  36.0
+unanswerable questions                 16.0   16.0     16.0  16.0
+...still got an answer                  1.0    1.0      1.0   0.0
+answers with a number in no source      0.0    0.0      0.0   0.0
+median answer tokens                   81.0   88.0    111.0  86.0
+median seconds                         12.4   11.5     11.0  12.4
+Persian questions answered in English   0.0    0.0      0.0   0.0

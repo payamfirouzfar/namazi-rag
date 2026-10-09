@@ -1,0 +1,3 @@
+multilingual-e5-base (first choice)   7112 chunks | English: hit@5 0.845 MRR 0.630 | Persian typed: hit@5 0.306 MRR 0.187 | Persian translated: hit@5 0.816 MRR 0.597
+multilingual-e5-large                7112 chunks | English: hit@5 0.793 MRR 0.585 | Persian typed: hit@5 0.551 MRR 0.373 | Persian translated: hit@5 0.878 MRR 0.611
+bge-m3                               7112 chunks | English: hit@5 0.897 MRR 0.639 | Persian typed: hit@5 0.612 MRR 0.480 | Persian translated: hit@5 0.816 MRR 0.680

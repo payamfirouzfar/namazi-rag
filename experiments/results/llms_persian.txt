@@ -1,0 +1,26 @@
+
+All questions
+                                       qwen 32B  gemma 12B  gemma 12B, no language line
+answerable questions                       49.0       49.0                         49.0
+...got an answer                           48.0       49.0                         47.0
+...right passage in the sources            45.0       45.0                         45.0
+...right passage cited                     41.0       41.0                         38.0
+unanswerable questions                     16.0       16.0                         16.0
+...still got an answer                      2.0        0.0                          0.0
+answers with a number in no source          0.0        1.0                          2.0
+median answer tokens                       82.0       90.0                         66.0
+median seconds                              4.9        3.6                          3.2
+Persian questions answered in English       0.0        0.0                         41.0
+
+Persian questions
+                                       qwen 32B  gemma 12B  gemma 12B, no language line
+answerable questions                       49.0       49.0                         49.0
+...got an answer                           48.0       49.0                         47.0
+...right passage in the sources            45.0       45.0                         45.0
+...right passage cited                     41.0       41.0                         38.0
+unanswerable questions                     16.0       16.0                         16.0
+...still got an answer                      2.0        0.0                          0.0
+answers with a number in no source          0.0        1.0                          2.0
+median answer tokens                       82.0       90.0                         66.0
+median seconds                              4.9        3.6                          3.2
+Persian questions answered in English       0.0        0.0                         41.0

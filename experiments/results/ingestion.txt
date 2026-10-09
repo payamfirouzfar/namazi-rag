@@ -1,0 +1,5 @@
+current ingestion                    7112 chunks | English: hit@5 0.845 MRR 0.630 | Persian typed: hit@5 0.306 MRR 0.187 | Persian translated: hit@5 0.816 MRR 0.597
++ remove repeated page headers       7087 chunks | English: hit@5 0.862 MRR 0.625 | Persian typed: hit@5 0.265 MRR 0.181 | Persian translated: hit@5 0.796 MRR 0.571
++ join words the PDF broke           7101 chunks | English: hit@5 0.845 MRR 0.622 | Persian typed: hit@5 0.306 MRR 0.179 | Persian translated: hit@5 0.816 MRR 0.595
++ book title in every chunk          7112 chunks | English: hit@5 0.828 MRR 0.608 | Persian typed: hit@5 0.245 MRR 0.148 | Persian translated: hit@5 0.816 MRR 0.634
+all three                            7076 chunks | English: hit@5 0.862 MRR 0.627 | Persian typed: hit@5 0.204 MRR 0.142 | Persian translated: hit@5 0.796 MRR 0.571
