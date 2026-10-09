@@ -83,7 +83,7 @@ I switched to bge-m3. It is the best for English and doubles the Persian result 
 | dense 2 : BM25 1 (used) | 0.897 / 0.639 | 0.612 / 0.480 | 0.816 / 0.680 |
 | dense 3 : BM25 1 | 0.914 / 0.643 | 0.612 / 0.484 | 0.837 / 0.668 |
 | dense only | 0.810 / 0.596 | 0.633 / 0.520 | 0.755 / 0.599 |
-| **dense 2 : BM25 1 + reranker (20 → 5)** | **0.914 / 0.800** | **0.837 / 0.727** | **0.878 / 0.759** |
+| **dense 2 : BM25 1 + reranker (20 to 5)** | **0.914 / 0.800** | **0.837 / 0.727** | **0.878 / 0.759** |
 
 I kept 2:1 (the weights are within a few questions of each other) and added the reranker. The biggest change is in the MRR: the right chunk moves from "somewhere in the top 5" to "first or second". For Persian typed, the hit rate goes from 0.61 to 0.84. It costs about 0.6 s per question (the whole experiment took 125 seconds for 156 searches). It is a setting too (`RERANK_MODEL`, empty means off) and a few lines in `app/retriever.py`.
 
